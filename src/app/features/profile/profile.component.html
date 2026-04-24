@@ -1,0 +1,289 @@
+<div class="mx-auto max-w-7xl px-3 py-3.5 mt-16">
+   <main class="min-w-0">
+      <div class="space-y-5 sm:space-y-6">
+         <section
+            class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_10px_rgba(15,23,42,.06)] sm:rounded-[28px]">
+            <div
+               class="group/cover relative h-44 bg-[linear-gradient(112deg,#0f172a_0%,#1e3a5f_36%,#2b5178_72%,#5f8fb8_100%)] sm:h-52 lg:h-60 "
+               style="background-image: linear-gradient(#0f172a38, #0f172a66), url(&quot;{{user.cover}}&quot;); background-size: cover; background-position: center center;">
+               <div
+                  class="absolute inset-0 bg-[radial-gradient(circle_at_20%_24%,rgba(255,255,255,.14)_0%,rgba(255,255,255,0)_36%)]">
+               </div>
+               <div
+                  class="absolute inset-0 bg-[radial-gradient(circle_at_86%_12%,rgba(186,230,253,.22)_0%,rgba(186,230,253,0)_44%)]">
+               </div>
+               <div class="absolute -left-16 top-10 h-36 w-36 rounded-full bg-white/8 blur-3xl"></div>
+               <div class="absolute right-8 top-6 h-48 w-48 rounded-full bg-[#c7e6ff]/10 blur-3xl"></div>
+               <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/25 to-transparent"></div>
+               <div
+                  class="pointer-events-none absolute right-2 top-2 z-10 flex max-w-[90%] flex-wrap items-center justify-end gap-1.5 opacity-100 transition duration-200 sm:right-3 sm:top-3 sm:max-w-none sm:gap-2 sm:opacity-0 sm:group-hover/cover:opacity-100 sm:group-focus-within/cover:opacity-100">
+                  <button type="button" (click)="openImg(user.cover)"
+                     class="pointer-events-auto inline-flex items-center gap-1 rounded-lg bg-black/45 px-2 py-1 text-[11px] font-bold text-white backdrop-blur transition hover:bg-black/60 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs"><i
+                        class="fas fa-expand"></i>View cover
+                  </button>
+                  <label
+                     class="pointer-events-auto inline-flex cursor-pointer items-center gap-1 rounded-lg bg-black/45 px-2 py-1 text-[11px] font-bold text-white backdrop-blur transition hover:bg-black/60 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs"><i
+                        class="far fa-camera"></i>Change cover
+                     <input accept="image/*" class="hidden" type="file">
+                  </label>
+                  <button type="button"
+                     class="pointer-events-auto inline-flex items-center gap-1 rounded-lg bg-black/45 px-2 py-1 text-[11px] font-bold text-white backdrop-blur transition hover:bg-black/60 disabled:cursor-not-allowed disabled:opacity-60 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs">
+                     <i class="fas fa-trash"></i>Remove</button>
+               </div>
+            </div>
+            <div class="relative -mt-12 px-3 pb-5 sm:-mt-16 sm:px-8 sm:pb-6">
+               <div class="rounded-3xl border border-white/60 bg-white/92 p-5  backdrop-blur-xl sm:p-7">
+                  <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                     <div class="min-w-0">
+                        <div class="flex items-end gap-4">
+                           <div class="group/avatar relative shrink-0"><button type="button"
+                                 class="cursor-zoom-in rounded-full">
+                                 <img [alt]="user.name"
+                                    class="h-28 w-28 rounded-full border-4 border-white object-cover shadow-md ring-2 ring-[#dbeafe]"
+                                    [src]="user.photo? user.photo : '/default-profile.png'">
+                              </button>
+                              <button type="button" (click)="openImg(user.photo)"
+                                 class="absolute bottom-1 left-1 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-white text-[#1877f2] opacity-100 shadow-sm ring-1 ring-slate-200 transition duration-200 hover:bg-slate-50 sm:opacity-0 sm:group-hover/avatar:opacity-100 sm:group-focus-within/avatar:opacity-100"
+                                 title="View profile photo" aria-label="View profile photo"><i
+                                    class="fas fa-expand"></i>
+                              </button>
+                              <label
+                                 class="absolute bottom-1 right-1 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-mainColorLight text-white opacity-100 shadow-sm transition duration-200 hover:bg-[#166fe5] sm:opacity-0 sm:group-hover/avatar:opacity-100 sm:group-focus-within/avatar:opacity-100">
+                                 <i class="far fa-camera"></i><input (change)="getphoto($event)" accept="image/*" class="hidden"
+                                    type="file"></label>
+                           </div>
+                           <div class="min-w-0 pb-1">
+                              <h2 class="truncate text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
+                                 {{user.name}}</h2>
+                              <p class="mt-1 text-lg font-semibold text-slate-500 sm:text-xl">@{{user.username}}</p>
+                              <div
+                                 class="mt-3 inline-flex items-center gap-2 rounded-full border border-[#d7e7ff] bg-[#eef6ff] px-3 py-1 text-xs font-bold text-[#0b57d0]">
+                                 <i class="fas fa-crown"></i>Route Posts member
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="grid w-full grid-cols-3 gap-2 lg:w-[520px]">
+                        <div class="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center sm:px-4 sm:py-4">
+                           <p class="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">Followers
+                           </p>
+                           <p class="mt-1 text-2xl font-black text-slate-900 sm:text-3xl">{{user.followersCount}}</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center sm:px-4 sm:py-4">
+                           <p class="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">Following
+                           </p>
+                           <p class="mt-1 text-2xl font-black text-slate-900 sm:text-3xl">{{user.followingCount}}</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center sm:px-4 sm:py-4">
+                           <p class="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">Bookmarks
+                           </p>
+                           <p class="mt-1 text-2xl font-black text-slate-900 sm:text-3xl">{{user.bookmarksCount}}</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mt-5 grid gap-4 lg:grid-cols-[1.3fr_.7fr]">
+                     <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                        <h3 class="text-sm font-extrabold text-slate-800">About</h3>
+                        <div class="mt-3 space-y-2 text-sm text-slate-600">
+                           <p class="flex items-center gap-2"><i class="far fa-envelope"></i>{{user.email}}</p>
+                           <p class="flex items-center gap-2"><i class="fas fa-user-group"></i>Active on Route Posts</p>
+                        </div>
+                     </div>
+                     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                        <div class="rounded-2xl border border-[#dbeafe] bg-[#f6faff] px-4 py-3">
+                           <p class="text-xs font-bold uppercase tracking-wide text-[#1f4f96]">My posts</p>
+                           <p class="mt-1 text-2xl font-black text-slate-900">{{posts.length}}</p>
+                        </div>
+                        <div class="rounded-2xl border border-[#dbeafe] bg-[#f6faff] px-4 py-3">
+                           <p class="text-xs font-bold uppercase tracking-wide text-[#1f4f96]">Saved posts</p>
+                           <p class="mt-1 text-2xl font-black text-slate-900">{{user.bookmarksCount}}</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="space-y-4">
+            <div
+               class="flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+               <div
+                  class="grid w-full grid-cols-2 gap-2 rounded-xl bg-slate-100 p-1.5 sm:inline-flex sm:w-auto sm:gap-0">
+                  @if (postsType==='me') {
+                  <button (click)="switchPostsType('me')"
+                     class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition bg-white text-mainColorLight shadow-sm"><i
+                        class="far fa-file-text"></i>My Posts</button>
+                  <button (click)="switchPostsType('saved')"
+                     class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition text-slate-600 hover:text-slate-900"><i
+                        class="far fa-bookmark"></i>Saved</button>
+                  }@else if (postsType==='saved') {
+                  <button (click)="switchPostsType('me')"
+                     class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition text-slate-600 hover:text-slate-900"><i
+                        class="far fa-file-text"></i>My Posts</button>
+                  <button (click)="switchPostsType('saved')"
+                     class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition bg-white text-mainColorLight shadow-sm"><i
+                        class="far fa-bookmark"></i>Saved</button>
+                  }
+               </div>
+               <span
+                  class="rounded-full bg-[#e7f3ff] px-3 py-1 text-xs font-bold text-[#1877f2]">{{posts.length}}</span>
+            </div>
+            <div class="space-y-3">
+
+               @if (postsType==='me') {
+               @for (post of posts; track post._id) {
+               <article 
+                  class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_1px_6px_rgba(15,23,42,.05)] transition hover:shadow-sm">
+                  <div class="p-4">
+                     <div class="flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex min-w-0 items-center gap-2"><img [alt]="post.user.name" [routerLink]="goProfileLink(post.user._id)"
+                              class="h-10 w-10 rounded-full object-cover cursor-pointer" [src]="post.user.photo">
+                           <div class="min-w-0">
+                              <p class="truncate text-sm font-extrabold text-slate-900 hover:underline cursor-pointer" [routerLink]="goProfileLink(post.user._id)">{{post.user.name}}</p>
+                              <p class="truncate text-xs font-semibold text-slate-500 hover:underline cursor-pointer" [routerLink]="goProfileLink(post.user._id)">@{{post.user.username}}</p>
+                           </div>
+                        </div><button [routerLink]="['/postDetails', post._id]"
+                           class="rounded-md px-2 py-1 text-xs font-bold text-mainColorLight transition hover:bg-[#e7f3ff]">View
+                           details</button>
+                     </div>
+                     <div class="pt-3">
+                        @if (post.body) {
+                        <p class="whitespace-pre-wrap text-[15px] leading-relaxed text-slate-800">{{post.body}}
+                        </p>
+                        }
+                     </div>
+                  </div>
+                  @if (post.image) {
+                  <div class="border-y border-slate-200 bg-slate-950/95">
+                     <button type="button" (click)="openImg(post.image)"
+                        class="group relative flex w-full cursor-zoom-in items-center justify-center">
+                        <img alt="post" class="max-h-[560px] w-auto max-w-full object-contain" [src]="post.image"><span
+                           class="pointer-events-none absolute inset-0 bg-black/0 transition group-hover:bg-black/10"></span>
+                     </button>
+                  </div>
+                  }
+                  @if (post.sharedPost!==null) {
+                     <app-shared-post [sharedPost]="post.sharedPost"></app-shared-post>
+                  }
+                  <div
+                     class="flex flex-col gap-2 border-t border-slate-200 px-4 py-3 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+                     <div class="flex flex-wrap items-center gap-3 sm:gap-5"><span
+                           class="inline-flex items-center gap-2 font-semibold"><i
+                              class="far fa-thumbs-up text-mainColorLight"></i>{{post.likesCount}} likes</span><span
+                           class="inline-flex items-center gap-2 font-semibold "><i
+                              class="fas fa-repeat text-mainColorLight"></i>{{post.sharesCount}} shares</span><span
+                           class="inline-flex items-center gap-2 font-semibold"><i
+                              class="far fa-comment text-mainColorLight"></i>{{post.commentsCount}} comments</span>
+                     </div><span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500"><i
+                           class="far fa-clock"></i>{{post.createdAt}}</span>
+                  </div>
+               </article>
+               }
+               }@else if (postsType==='saved') {
+               @for (bookmark of bookmarks; track bookmark._id) {
+               <article
+                  class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_1px_6px_rgba(15,23,42,.05)] transition hover:shadow-sm">
+                  <div class="p-4">
+                     <div class="flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex min-w-0 items-center gap-2"><img [alt]="bookmark.user.name" [routerLink]="goProfileLink(bookmark.user._id)"
+                              class="h-10 w-10 rounded-full object-cover cursor-pointer" [src]="bookmark.user.photo">
+                           <div class="min-w-0">
+                              <p class="truncate text-sm font-extrabold text-slate-900 hover:underline cursor-pointer" [routerLink]="goProfileLink(bookmark.user._id)">{{bookmark.user.name}}</p>
+                              <p class="truncate text-xs font-semibold text-slate-500 hover:underline cursor-pointer" [routerLink]="goProfileLink(bookmark.user._id)">@{{bookmark.user.username}}</p>
+                           </div>
+                        </div><button [routerLink]="['/postDetails', bookmark._id]"
+                           class="rounded-md px-2 py-1 text-xs font-bold text-mainColorLight transition hover:bg-[#e7f3ff]">View
+                           details</button>
+                     </div>
+                     <div class="pt-3">
+                        @if (bookmark.body) {
+                        <p class="whitespace-pre-wrap text-[15px] leading-relaxed text-slate-800">{{bookmark.body}}
+                        </p>
+                        }
+                     </div>
+                  </div>
+                  @if (bookmark.image) {
+                  <div class="border-y border-slate-200 bg-slate-950/95">
+                     <button type="button" (click)="openImg(bookmark.image)"
+                        class="group relative flex w-full cursor-zoom-in items-center justify-center">
+                        <img alt="bookmark" class="max-h-[560px] w-auto max-w-full object-contain"
+                           [src]="bookmark.image"><span
+                           class="pointer-events-none absolute inset-0 bg-black/0 transition group-hover:bg-black/10"></span>
+                     </button>
+                  </div>
+                  }
+                  @if (bookmark.sharedPost!==null) {
+                     <app-shared-post [sharedPost]="bookmark.sharedPost"></app-shared-post>
+                  }
+                  <div
+                     class="flex flex-col gap-2 border-t border-slate-200 px-4 py-3 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+                     <div class="flex flex-wrap items-center gap-3 sm:gap-5"><span
+                           class="inline-flex items-center gap-2 font-semibold"><i
+                              class="far fa-thumbs-up text-mainColorLight"></i>{{bookmark.likesCount}} likes</span><span
+                           class="inline-flex items-center gap-2 font-semibold "><i
+                              class="fas fa-repeat text-mainColorLight"></i>{{bookmark.sharesCount}} shares</span><span
+                           class="inline-flex items-center gap-2 font-semibold"><i
+                              class="far fa-comment text-mainColorLight"></i>{{bookmark.commentsCount}} comments</span>
+                     </div><span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500"><i
+                           class="far fa-clock"></i>{{bookmark.createdAt}}</span>
+                  </div>
+               </article>
+               }
+               }
+            </div>
+         </section>
+      </div>
+   </main>
+</div>
+
+@if (showImg) {
+<div class="fixed inset-0 z-[80] flex items-center justify-center bg-black/90 p-4 sm:p-8">
+   <button type="button" (click)="closeImg()"
+      class="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"><i
+         class="fas fa-xmark"></i>
+   </button>
+   <img [alt]="user.name" class="img max-h-full max-w-full object-contain" [src]="img">
+</div>
+}
+@if (uploadPhotoModal) {
+<div class="fixed inset-0 z-[90] flex items-center justify-center bg-black/70 p-4">
+   <div class="w-full max-w-[560px] rounded-2xl border border-slate-200 bg-white p-4 shadow-xl sm:p-5">
+      <div class="mb-3">
+         <h3 class="text-lg font-extrabold text-slate-900">Adjust profile photo</h3>
+         <p class="text-sm text-slate-500">Drag to reposition and use zoom for perfect framing.</p>
+      </div>
+      <div class="mx-auto w-full max-w-[340px] overflow-x-auto pb-1">
+         <div
+            class="relative h-[320px] w-[320px] touch-none overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-slate-200">
+            <img alt="Crop preview" draggable="false" class="pointer-events-none absolute left-1/2 top-1/2 select-none"
+            [src]="fileImg"
+               style="width: 252px; height: 227px; max-width: none; max-height: none; transform: translate(calc(-50% + 0px), calc(-50% + 0px)) scale(1.40969); transform-origin: center center;">
+         </div>
+      </div>
+      <div class="mt-4 space-y-2">
+         <div class="flex items-center justify-between text-xs font-bold text-slate-500">
+            <span>Zoom</span><span>1.00x</span></div><input min="1" max="3" step="0.01"
+            class="h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-200 accent-[#1877f2]" type="range"
+            value="1">
+      </div>
+      <div class="mt-4">
+         <p class="mb-1 text-xs font-bold uppercase tracking-wide text-slate-500">Post privacy</p>
+         <select [(ngModel)]="privacy"
+            class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 outline-none focus:border-[#1877f2]">
+            <option value="public"selected >Public</option>
+            <option value="following">Followers</option>
+            <option value="only_me">Only_me</option>
+         </select>
+      </div>
+      <div class="mt-5 flex items-center justify-end gap-2">
+         <button type="button" (click)="fileImg===null ; uploadPhotoModal=false; saveFile.size===0"
+            class="inline-flex items-center rounded-lg border border-slate-300 px-4 py-2 text-sm font-bold text-slate-600 transition hover:bg-slate-50">Cancel
+         </button>
+         <button
+            type="button" (click)="uploadPhoto()"
+            class="inline-flex items-center rounded-lg bg-[#1877f2] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#166fe5] disabled:cursor-not-allowed disabled:opacity-60">Save
+            photo
+         </button>
+      </div>
+   </div>
+</div>
+}

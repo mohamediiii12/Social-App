@@ -1,0 +1,60 @@
+<aside
+      class=" w-full text-sm xl:sticky  bg-white rounded-[20px] shadow-sm border border-slate-50 p-2.5 grid grid-cols-2 xl:grid-cols-1 gap-1"
+      aria-label="Sidebar Navigation">
+      <button (click)="getFeedContent('following')"
+      [class]="{
+      'text-mainColorLight':type === 'following',
+      'bg-blue-50':type === 'following',
+      'text-slate-700':type !== 'following',
+      'hover:bg-slate-50':type !== 'following'
+      }"
+         class="flex items-center gap-4 p-2 cursor-pointer rounded-xl  font-bold transition-colors duration-200 justify-center xl:justify-start">
+         <i [class]="{
+         'text-slate-500':type!=='following',
+         'group-hover:text-slate-700':type!=='following',}" 
+         class="fa-regular fa-newspaper w-5 text-center transition-colors"></i>
+         <span class="">Feed</span>
+      </button>
+
+      <button (click)="getFeedContent('me')"   [class]="{
+      'text-mainColorLight':type === 'me',
+      'bg-blue-50':type === 'me',
+      'text-slate-700':type !== 'me',
+      'hover:bg-slate-50':type !== 'me'
+      }"
+         class="flex items-center gap-4 p-2 cursor-pointer rounded-xl font-bold hover:bg-slate-50 transition-colors duration-200 justify-center xl:justify-start group">
+         <i [class]="{
+         'text-slate-500':type!=='me',
+         'group-hover:text-slate-700':type!=='me',}"
+            class="fa-solid fa-wand-magic-sparkles w-5 text-center transition-colors"></i>
+         <span class="">My Posts</span>
+      </button>
+
+      <button (click)="getFeedContent('all')" [class]="{
+      'text-mainColorLight':type === 'all',
+      'bg-blue-50':type === 'all',
+      'text-slate-700':type !== 'all',
+      'hover:bg-slate-50':type !== 'all'
+      }"
+         class="flex items-center gap-4 p-2 cursor-pointer rounded-xl  font-bold hover:bg-slate-50 transition-colors duration-200 justify-center xl:justify-start group">
+         <i [class]="{
+         'text-slate-500':type!=='all',
+         'group-hover:text-slate-700':type!=='all'}"
+          class="fa-solid fa-globe w-5 text-center  transition-colors"></i>
+         <span class="">Community</span>
+      </button>
+
+      <button (click)="getFeedContent('bookmarks')" [class]="{
+      'text-mainColorLight':type === 'bookmarks',
+      'bg-blue-50':type === 'bookmarks',
+      'text-slate-700':type !== 'bookmarks',
+      'hover:bg-slate-50':type !== 'bookmarks'
+      }"
+         class="flex items-center gap-4 p-2 cursor-pointer rounded-xl text-slate-700 font-bold hover:bg-slate-50 transition-colors duration-200 justify-center xl:justify-start group">
+         <i [class]="{
+         'text-slate-500':type!=='bookmarks',
+         'group-hover:text-slate-700':type!=='bookmarks'}"
+            class="fa-regular fa-bookmark w-5 text-center text-slate-500 group-hover:text-slate-700 transition-colors"></i>
+         <span class="">Saved</span>
+      </button>
+   </aside>

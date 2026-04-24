@@ -1,0 +1,16 @@
+<div class="mx-auto max-w-7xl px-3 py-3.5 pt-18">
+   <main class="min-w-0">
+      <div class="mx-auto max-w-3xl space-y-4">
+         <button (click)="goBack()"
+            class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-bold text-slate-700 transition hover:bg-slate-50"><i class="fa-solid fa-arrow-left"></i>Back</button>
+         <app-post
+    [post]="post"
+    [mainUser]="mainUser"
+    (like)="likeUnLike($event)"
+    (delete)="deletePost($event)"
+    (bookmark)="saveUnsave($event)"
+    (update)="updatePost($event)"  
+   ></app-post>
+      </div>
+   </main>
+</div>

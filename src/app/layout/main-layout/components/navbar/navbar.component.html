@@ -1,0 +1,55 @@
+
+
+<nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
+  <div class="our-container py-2 flex  items-center justify-between flex-wrap gap-y-2 ">
+  <a routerLink="/feed" class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer"> 
+      <div class="size-12 overflow-hidden rounded-lg"><img src="/Modern SocialHub logo design.png" class=" object-cover object-center" alt="website logo" /></div>
+      <span class="self-center  text-xl text-heading font-extrabold whitespace-nowrap hidden sm:block">SocialHub</span>
+  </a>
+
+  <div class="items-center justify-between flex  " id="navbar-user">
+    <ul class="font-extrabold text-sm flex  p-[5px]   border border-default rounded-lg bg-neutral-secondary-soft flex-row gap-x-1.5  rtl:space-x-reverse ">
+      <li>
+        <a routerLink="/feed" routerLinkActive="!text-mainColorLight !bg-white hover:!text-mainColorLight !bg-white" class="block py-2 px-3 text-slate-600 rounded-lg  hover:bg-white  hover:text-slate-900 "><i class="far fa-house sm:me-2 text-[17px]"></i><span class="hidden sm:inline">Feed</span></a>
+      </li>
+      <li>
+        <a routerLink="/profile" routerLinkActive="!text-mainColorLight !bg-white hover:!text-mainColorLight !bg-white" class="block py-2 px-3 text-slate-600 rounded-lg  hover:bg-white  hover:text-slate-900 "> <i class="far fa-user sm:me-2 text-[17px]"></i><span class="hidden sm:inline">Profile</span></a>
+      </li>
+      <li>
+        <a routerLink="/notifications" routerLinkActive="!text-mainColorLight !bg-white hover:!text-mainColorLight !bg-white" class="block py-2 px-3 text-slate-600 rounded-lg  hover:bg-white  hover:text-slate-900 "> <i class="far fa-comment sm:me-2 text-[17px]"></i><span class="hidden sm:inline">Notifications</span></a>
+      </li>
+    </ul>
+  </div>
+    <div class=" dropDownButton relative flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <button type="button" (click)="toggleDropDown()" class="flex gap-x-2 items-center text-sm  bg-neutral-primary rounded-full hover:bg-neutral-tertiary-soft duration-150 cursor-pointer  focus:ring-2 border border-default focus:ring-neutral-tertiary text-slate-800 font-semibold p-1.5"  aria-expanded="false"  >
+        <span class="sr-only">Open user menu</span>
+        <img class="w-8 h-8 rounded-full" [src]="userInfo.photo" alt="user photo">
+        <p class="hidden md:block">{{ userInfo.name }}</p>
+        <i class=" fa-solid fa-bars"></i>
+      </button>
+      <!-- Dropdown menu -->
+      @if (dropDown) {
+        <div  class="z-50  absolute top-12 -right-2 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" >
+        <div class="px-4 py-3 text-sm border-b border-default">
+          <span class="block text-heading font-medium">{{ userInfo.name }}</span>
+          <span class="block text-body truncate">{{ userInfo.email }}</span>
+        </div>
+        <ul class="p-2 text-sm text-body font-medium" aria-labelledby="user-menu-button">
+          
+          <li>
+            <a routerLink="/profile" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-slate-600 rounded"><i><i class="fas fa-user me-2 text-sm"></i></i>Profile</a>
+          </li>
+          <li>
+            <a routerLink="/change" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-slate-600 rounded"><i><i class="fas fa-gear me-2 text-sm"></i></i>Settings</a>
+          </li>
+          <li>
+            <a (click)="logOut()" class="inline-flex items-center w-full p-2 hover:bg-red-50 hover:text-slate-600 rounded"> <i class="fas fa-sign-out-alt me-2 text-sm"></i>Sign out</a>
+          </li>
+        </ul>
+      </div>
+      }
+      
+      
+  </div>
+  </div>
+</nav>

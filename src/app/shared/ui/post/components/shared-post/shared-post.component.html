@@ -1,0 +1,40 @@
+<div class="mx-4 my-3 overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+   <div class="p-3">
+      <div class="mb-2 flex items-center gap-2"><img [alt]="sharedPost.user.name"
+            class="h-9 w-9 rounded-full object-cover" [src]="sharedPost.user.photo">
+         <div class="min-w-0">
+            <p class="truncate text-sm font-bold text-slate-900">{{sharedPost.user.name}}</p>
+            <p class="truncate text-xs text-slate-500">@{{sharedPost.user.username}}</p>
+         </div>
+         <button  [routerLink]="['/postDetails', sharedPost._id]"
+            class="ml-auto inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-bold text-[#1877f2] hover:bg-[#e7f3ff]">Original
+            Post <i class="fas fa-external-link"></i>
+         </button>
+      </div>
+      @if (sharedPost.body) {
+      <p class="whitespace-pre-wrap text-sm leading-relaxed text-slate-800">{{sharedPost.body}}</p>
+      }
+   </div>
+   @if (sharedPost.image) {
+      <div class="border-t border-slate-200">
+      <button type="button" class="group relative block w-full cursor-zoom-in" (click)="openImg(sharedPost.image)">
+         <img
+            alt="Shared post" class="max-h-[560px] w-full object-cover"
+            [src]="sharedPost.image"><span
+            class="pointer-events-none absolute inset-0 bg-black/0 transition group-hover:bg-black/10"></span>
+         </button>
+   </div>
+   }
+</div>
+
+@if (showImg) {
+   <div class="fixed inset-0 z-[80] flex items-center justify-center bg-black/90 p-4 sm:p-8">
+      <button type="button" (click)="closeImg()"
+      class="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"><i
+         class="fas fa-xmark"></i>
+      </button>
+      <img [alt]="sharedPost.user.name"
+      class="img max-h-full max-w-full object-contain"
+      [src]="img">
+</div>
+}

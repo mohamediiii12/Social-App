@@ -1,0 +1,6 @@
+<section class="  pt-20 our-container grid xl:grid-cols-[220px_minmax(0,1fr)_320px] gap-4 items-start">
+   <app-side-left (itemEvent)="fllter($event)"  class="order-1 xl:sticky top-23"></app-side-left>
+  <app-feed-content [feedContentt]="feedContent? feedContent : 'following'" class="order-3 xl:order-2"></app-feed-content>
+   <app-side-right class="order-2 xl:order-3 xl:sticky top-20"></app-side-right>
+
+</section>

@@ -1,1 +1,32 @@
+@import "tailwindcss";
 /* You can add global styles to this file, and also import other style files */
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+
+@utility container{
+   margin: auto;
+}
+@layer base {
+  :is([type=text], [type=email], [type=url], [type=password], [type=number], [type=date], [type=datetime-local], [type=month], [type=search], [type=tel], [type=time], [type=week], [multiple], textarea, select):focus{
+      --tw-ring-color:none !important;
+      } 
+      button{
+          @apply cursor-pointer
+      }             
+  }
+  
+@theme {
+   --color-mainColor: #00298D;
+   --color-secondColor: #001f6b;
+   --color-mainColorLight:#1f6fe5;
+   
+}
+body{
+    font-family: "Cairo", sans-serif;
+    
+}
+.our-container{
+   @apply max-w-screen-xl px-4  mx-auto
+}
