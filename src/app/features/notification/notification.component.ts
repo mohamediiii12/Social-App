@@ -31,6 +31,7 @@ export class NotificationComponent implements OnInit {
   getAllNotifications(page: number, limit: number): void {
     this.notificationService.getAllNotifications(page, limit).subscribe({
       next: (response) => {
+        console.log(response);
         const newNotifications = response.data.notifications;
         this.allNotifications = [...this.allNotifications, ...newNotifications];
         this.currentPage = response.meta.pagination.currentPage;
@@ -57,6 +58,7 @@ export class NotificationComponent implements OnInit {
   getUnreadNotifications(page: number, limit: number): void {
     this.notificationService.getUnreadNotifications(page, limit).subscribe({
       next: (response) => {
+        console.log(response);
         const newNotifications = response.data.notifications;
         this.unreadNotifications = [...this.unreadNotifications, ...newNotifications];
         this.currentPage = response.meta.pagination.currentPage;
