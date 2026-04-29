@@ -126,7 +126,17 @@ export class FeedContentComponent implements OnInit, OnChanges,AfterViewInit,OnD
         next: (response) => {
           console.log(response);
           this.finishProgress();
-          this.getPosts(this.feedContentt, 1);
+          this.postService.getSinglePost(response.data.post._id).subscribe({
+            next: (response) => {
+              if (this.feedContentt === 'all') {
+                this.allPosts.unshift(response.data.post);
+              } else if (this.feedContentt === 'following') {
+                this.followingPosts.unshift(response.data.post);
+              } else if (this.feedContentt === 'me') {
+                this.mePosts.unshift(response.data.post); 
+              }
+            }
+          })
           postForm.reset();
           this.fileImg = null;
           this.content.reset();
