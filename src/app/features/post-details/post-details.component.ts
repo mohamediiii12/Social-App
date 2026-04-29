@@ -2,13 +2,13 @@ import { Component, inject, OnInit } from '@angular/core';
 import { PostComponent } from "../../shared/ui/post/post.component";
 import { LoginUser } from '../../core/models/login/login.interface';
 import { PostService } from '../../core/services/post.service';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from '../../core/models/posts/post.interface';
 import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-post-details',
-  imports: [PostComponent,RouterLink],
+  imports: [PostComponent],
   templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.css',
 })
