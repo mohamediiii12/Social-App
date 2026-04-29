@@ -125,7 +125,11 @@
                   }
                </div>
                <span
-                  class="rounded-full bg-[#e7f3ff] px-3 py-1 text-xs font-bold text-[#1877f2]">{{posts.length}}</span>
+                  class="rounded-full bg-[#e7f3ff] px-3 py-1 text-xs font-bold text-[#1877f2]">@if (postsType==='me') {
+                     {{posts.length}} 
+                  }@else if (postsType==='saved') {
+                     {{bookmarks.length}}
+                  }</span>
             </div>
             <div class="space-y-3">
 
@@ -174,7 +178,7 @@
                            class="inline-flex items-center gap-2 font-semibold"><i
                               class="far fa-comment text-mainColorLight"></i>{{post.commentsCount}} comments</span>
                      </div><span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500"><i
-                           class="far fa-clock"></i>{{post.createdAt}}</span>
+                           class="far fa-clock"></i>{{post.createdAt|customTime}}</span>
                   </div>
                </article>
                }
@@ -224,7 +228,7 @@
                            class="inline-flex items-center gap-2 font-semibold"><i
                               class="far fa-comment text-mainColorLight"></i>{{bookmark.commentsCount}} comments</span>
                      </div><span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500"><i
-                           class="far fa-clock"></i>{{bookmark.createdAt}}</span>
+                           class="far fa-clock"></i>{{bookmark.createdAt|customTime}}</span>
                   </div>
                </article>
                }

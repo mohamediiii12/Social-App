@@ -1,21 +1,21 @@
-<div class="bg-white rounded-[16px] shadow-sm border border-slate-200 p-4 pb-0 mb-3.5">
+<div class="bg-white rounded-[16px] shadow-sm border border-slate-200 p-4 pb-0 mb-3.5" [routerLink]="['/postDetails',post.id]" >
    <!-- user details  -->
    <div class="flex items-start justify-between mb-3">
       <div class="flex items-center gap-3">
-         <img [src]="post.user.photo" [alt]="post.user.name" [routerLink]="goProfileLink(post.user._id)"
+         <img [src]="post.user.photo" [alt]="post.user.name" [routerLink]="goProfileLink(post.user._id)" (click)="$event.stopPropagation()"
             class="cursor-pointer size-10 rounded-full object-cover shrink-0 bg-slate-100 border border-slate-50" />
          <div>
-            <span [routerLink]="goProfileLink(post.user._id)"
+            <span [routerLink]="goProfileLink(post.user._id)" (click)="$event.stopPropagation()"
                class="text-[15px] font-bold text-slate-900 leading-tight hover:underline cursor-pointer">{{post.user.name}}</span>
             @if (post.body==='updated profile picture.') {
             <span class="text-[12px] text-gray-500 ms-1">updated profile picture.</span>
             }
             <div class="flex items-center text-[13px] flex-wrap text-slate-500 mt-0.5 gap-1">
-               <span [routerLink]="goProfileLink(post.user._id)"
+               <span [routerLink]="goProfileLink(post.user._id)" (click)="$event.stopPropagation()"
                   class="hover:underline cursor-pointer">@{{post.user.username}}</span>
-               <span>&middot;</span>
-               <span class="hover:underline cursor-pointer line">{{post.createdAt}}</span>
-               <span>&middot;</span>
+               <span> &middot;</span>
+               <span class="hover:underline cursor-pointer line">{{post.createdAt | relativeTime}}</span>
+               <span> &middot;</span>
                @if(openEdit){<div
                   class="p-0 w-fit items-center bg-neutral-secondary-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body">
                   <i [class]="{
@@ -42,7 +42,7 @@
       </div>
 
       <div class="relative group dropdownMenuIconButton">
-         <button (click)="dots.classList.toggle('hidden')"
+         <button (click)="$event.stopPropagation();dots.classList.toggle('hidden')"
             class="text-heading cursor-pointer bg-neutral-primary box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none"
             type="button">
             <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -56,7 +56,7 @@
             class="z-30 hidden dots absolute top-12   -right-5 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownMenuIconButton">
                <li>
-                  <button (click)="dots.classList.add('hidden');dots.classList.remove('block'); onBookmark()"
+                  <button (click)="$event.stopPropagation();dots.classList.add('hidden');dots.classList.remove('block'); onBookmark()"
                      type="button"
                      class="cursor-pointer inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">
                      @if(!post.bookmarked){
@@ -66,11 +66,11 @@
                      }
                   </button>
                   @if (post.user._id===mainUser._id) {
-                  <button (click)="onEdit();dots.classList.add('hidden');dots.classList.remove('block')" type="button"
+                  <button (click)="$event.stopPropagation();onEdit();dots.classList.add('hidden');dots.classList.remove('block')" type="button"
                      class="cursor-pointer inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">
                      Edit post
                   </button>
-                  <button (click)="onDelete();dots.classList.add('hidden');dots.classList.remove('block')" type="button"
+                  <button (click)="$event.stopPropagation();onDelete();dots.classList.add('hidden');dots.classList.remove('block')" type="button"
                      class="cursor-pointer inline-flex text-red-700 items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">
                      Delete post
                   </button>
@@ -90,11 +90,11 @@
             class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-[15px] text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-blue-50 focus:border-blue-300 transition-all resize-y min-h-30"
             placeholder="" aria-label="Create a new post"></textarea>
          <div class="flex items-center justify-end gap-2">
-            <button (click)="openEdit=false" type="button"
+            <button (click)="$event.stopPropagation();openEdit=false" type="button"
                class="cursor-pointer bg-transparent border border-slate-300 hover:bg-slate-100 text-slate-600 px-4 py-1.5 rounded-full font-bold text-[12px] flex items-center gap-2 focus:ring-4 focus:ring-blue-200 outline-none">
                Cancel
             </button>
-            <button (click)="onSaveEdit()" type="button"
+            <button (click)="$event.stopPropagation();onSaveEdit()" type="button"
                class="cursor-pointer bg-mainColorLight hover:bg-mainColor text-white px-4 py-1.5 rounded-full font-bold text-[12px] flex items-center gap-2 focus:ring-4 focus:ring-blue-200 outline-none">
                Save
             </button>
@@ -102,7 +102,7 @@
       </div>
       }@else{
       @if(post.body!=='updated profile picture.'){
-      <p class="whitespace-pre-wrap">{{post.body}}</p>
+      <p class="whitespace-pre-wrap truncate">{{post.body}}</p>
       }
       }
       @if (post.bookmarked) {
@@ -113,7 +113,7 @@
       }
       }
       @if (post.image) {
-      <div class="relative mt-2 bg-mainColor/10 rounded " (click)="openImg(post.image)">
+      <div class="relative mt-2 bg-mainColor/10 rounded " (click)="$event.stopPropagation();openImg(post.image)">
          <img [src]="post.image" alt="Post image" class="w-full max-h-screen  object-contain  rounded  ">
       </div>
 
@@ -125,7 +125,7 @@
 
    <!-- like share comments  counts & view details -->
    <div class="flex items-center flex-wrap justify-between text-[13px] text-slate-500 mb-3 px-1">
-      <div (click)="showLikeList=!showLikeList"
+      <div (click)="$event.stopPropagation();showLikeList=!showLikeList"
          class="flex items-center flex-wrap gap-1.5 cursor-pointer hover:underline">
          <div class="w-5 h-5 rounded-full bg-blue-500 text-white flex items-center justify-center text-2xs">
             <i class="fa-solid fa-thumbs-up"></i>
@@ -146,7 +146,7 @@
 
    <!-- buttons like - comment - share -->
    <div class="flex items-center  justify-between px-1 py-1">
-      <button #like (click)="onLike()" [class]="{
+      <button #like (click)="$event.stopPropagation();onLike()" [class]="{
             'text-mainColorLight': post.likes.includes(mainUser._id),
             'bg-mainColorLight/16': post.likes.includes(mainUser._id),
             'text-slate-600': !post.likes.includes(mainUser._id),
@@ -155,12 +155,12 @@
          <i class="fa-regular fa-thumbs-up text-lg"></i>
          Like
       </button>
-      <button #comment (click)="onComment()"
+      <button #comment (click)="$event.stopPropagation();onComment()"
          class="flex-1 flex cursor-pointer items-center justify-center gap-2 text-slate-600 font-semibold text-[14px] hover:bg-slate-50 py-2 rounded-lg transition-colors">
          <i class="fa-regular fa-message text-lg"></i>
          Comment
       </button>
-      <button (click)="onShare()"
+      <button (click)="$event.stopPropagation();onShare()"
          class="flex-1 flex cursor-pointer items-center justify-center gap-2 text-slate-600 font-semibold text-[14px] hover:bg-slate-50 py-2 rounded-lg transition-colors">
          <i class="fa-solid fa-share text-lg"></i>
          Share
@@ -187,7 +187,7 @@
             }
          </div>
       </div>
-      <button (click)="onComment()" class="mt-2 text-xs font-bold text-mainColorLight hover:underline">View all
+      <button (click)="$event.stopPropagation();onComment()" class="mt-2 text-xs font-bold text-mainColorLight hover:underline">View all
          comments</button>
    </div>
 
@@ -203,7 +203,7 @@
 
 @if (showImg) {
 <div class="fixed inset-0 z-[80] flex items-center justify-center bg-black/90 p-4 sm:p-8">
-   <button type="button" (click)="closeImg()"
+   <button type="button" (click)="$event.stopPropagation();closeImg()"
       class="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"><i
          class="fas fa-xmark"></i>
    </button>
@@ -216,7 +216,7 @@
 <div class="fixed inset-0 z-[70] flex items-center justify-center bg-slate-900/65 p-4">
    <div class="w-full max-w-[560px] rounded-2xl border border-slate-200 bg-white shadow-2xl">
       <div class="flex items-center justify-between border-b border-slate-200 px-4 py-3">
-         <h4 class="text-base font-extrabold text-slate-900">Share post</h4><button type="button" (click)="showShareModal=false; shareBody=''"
+         <h4 class="text-base font-extrabold text-slate-900">Share post</h4><button type="button" (click)="$event.stopPropagation();showShareModal=false; shareBody=''"
             class="inline-flex h-8 w-8 items-center justify-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-700 disabled:opacity-60"><i class="fas fa-xmark"></i></button>
       </div>
       <div class="space-y-3 p-4">
@@ -239,9 +239,9 @@
          </div>
       </div>
       <div class="flex items-center justify-end gap-2 border-t border-slate-200 px-4 py-3">
-         <button type="button" (click)="showShareModal=false; shareBody=''"
+         <button type="button" (click)="$event.stopPropagation();showShareModal=false; shareBody=''"
             class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-slate-100 disabled:opacity-60">Cancel</button>
-         <button (click)="sharing()" type="button" [disabled]="loadingShare"
+         <button (click)="$event.stopPropagation();sharing()" type="button" [disabled]="loadingShare"
             class="inline-flex items-center rounded-lg bg-[#1877f2] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#166fe5] disabled:cursor-not-allowed disabled:opacity-60">
             @if (loadingShare) {
             Sharing<i class="ms-1 fas fa-spinner animate-spin"></i>

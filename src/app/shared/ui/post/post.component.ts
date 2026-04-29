@@ -8,13 +8,14 @@ import { LikesListComponent } from "./components/likes-list/likes-list.component
 import { RouterLink } from "@angular/router";
 import { SharedPostComponent } from "./components/shared-post/shared-post.component";
 import { share } from 'rxjs';
+import { RelativeTimePipe } from '../../pipes/relative-time-pipe';
 
 
 
 @Component({
   selector: 'app-post',
   standalone: true,
-  imports: [ReactiveFormsModule, CommentsComponent, LikesListComponent, RouterLink, SharedPostComponent, FormsModule],
+  imports: [ReactiveFormsModule, CommentsComponent, LikesListComponent, RouterLink, SharedPostComponent, FormsModule,RelativeTimePipe],
   templateUrl: './post.component.html',
   styleUrl: './post.component.css'
 })
@@ -64,6 +65,7 @@ export class PostComponent {
   }
    @HostListener('document:click', ['$event'])
   clickout(event: MouseEvent) {
+    event.stopPropagation();
     const target = event.target as HTMLElement;
     if (!target.closest('.dropdownMenuIconButton')) {
       document.querySelector('.dots')?.classList.add('hidden');

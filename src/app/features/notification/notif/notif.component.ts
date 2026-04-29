@@ -2,10 +2,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Notification } from '../models/get-notifications.interface';
 import { RouterLink } from "@angular/router";
 import { LoginUser } from '../../../core/models/login/login.interface';
+import { RelativeTimePipe } from '../../../shared/pipes/relative-time-pipe';
 
 @Component({
   selector: 'app-notif',
-  imports: [RouterLink],
+  imports: [RouterLink,RelativeTimePipe],
   templateUrl: './notif.component.html',
   styleUrl: './notif.component.css',
 })

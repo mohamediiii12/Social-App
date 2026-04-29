@@ -8,9 +8,11 @@ import { Bookmark } from '../../core/models/bockMarks/book-marks.interface';
 import { FormsModule } from '@angular/forms';
 import { SharedPostComponent } from "../../shared/ui/post/components/shared-post/shared-post.component";
 
+import { CustomTimePipe } from '../../shared/pipes/custom-time-pipe';
+
 @Component({
   selector: 'app-profile',
-  imports: [RouterLink, FormsModule, SharedPostComponent],
+  imports: [RouterLink, FormsModule, SharedPostComponent,CustomTimePipe],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css',
 })

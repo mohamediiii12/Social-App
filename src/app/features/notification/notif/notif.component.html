@@ -48,7 +48,7 @@
             }
          </p>
          <div class="flex items-center gap-1.5 sm:gap-2"><span
-               class="text-xs font-semibold text-slate-500">{{notif.createdAt}}</span>
+               class="text-xs font-semibold text-slate-500">{{notif.createdAt|relativeTime}}</span>
             @if (!notif.isRead) {
             <i class="fas fa-circle text-[3px] text-mainColorLight"></i>
             }
