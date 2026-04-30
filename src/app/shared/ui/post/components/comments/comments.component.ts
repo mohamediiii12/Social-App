@@ -5,10 +5,11 @@ import { Comment } from './models/comment.interface';
 import { LoginUser } from '../../../../../core/models/login/login.interface';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from "@angular/router";
+import { RelativeTimePipe } from '../../../../pipes/relative-time-pipe';
 
 @Component({
   selector: 'app-comments',
-  imports: [ReplaysComponent, ReactiveFormsModule, RouterLink],
+  imports: [ReplaysComponent, ReactiveFormsModule, RouterLink,RelativeTimePipe],
   templateUrl: './comments.component.html',
   styleUrl: './comments.component.css',
 })
@@ -99,6 +100,7 @@ export class CommentsComponent implements OnInit {
         next: (response) => {
           console.log(response);
           this.loadingCreating = false
+          this.comments=[]
           this.getComments(1);
           CommentForm.reset();
           this.fileImg = null;

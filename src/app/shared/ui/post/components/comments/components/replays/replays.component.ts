@@ -5,10 +5,11 @@ import { Reply } from './models/replays.interface';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommentsService } from '../../services/comments.service';
 import { RouterLink } from "@angular/router";
+import { RelativeTimePipe } from '../../../../../../pipes/relative-time-pipe';
 
 @Component({
   selector: 'app-replays',
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink,RelativeTimePipe],
   templateUrl: './replays.component.html',
   styleUrl: './replays.component.css',
 })
@@ -100,6 +101,7 @@ export class ReplaysComponent implements OnInit {
         next: (response) => {
           console.log(response);
           this.loadingCreating = false
+          this.replays=[]
           this.getReplays(1);
           replayForm.reset();
           this.fileImg = null;

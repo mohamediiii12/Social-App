@@ -6,7 +6,7 @@ export const headerInterceptor: HttpInterceptorFn = (req, next) => {
     if(!req.url.includes('/login') || !req.url.includes('/register')) {
     req= req.clone({
       setHeaders: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`
+        Authorization: `Bearer ${token}`
       }
     })
   }
