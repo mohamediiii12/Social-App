@@ -2,14 +2,17 @@ import { Component, EventEmitter, HostListener, inject, Input, OnInit, Output } 
 import { PostLikesService } from '../../services/post-likes.service';
 import { Like } from '../../models/post-likes.interface';
 import { RouterLink } from "@angular/router";
+import { LoginUser } from '../../../../../core/models/login/login.interface';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-likes-list',
-  imports: [RouterLink],
+  imports: [RouterLink,TranslatePipe],
   templateUrl: './likes-list.component.html',
   styleUrl: './likes-list.component.css',
 })
 export class LikesListComponent implements OnInit {
+  mainUser:LoginUser=JSON.parse(localStorage.getItem('user')!)
   private readonly postLikesService = inject(PostLikesService);
   @Input() postId!: string;
   @Input() postLikesCount!: number;
@@ -41,4 +44,7 @@ export class LikesListComponent implements OnInit {
       this.closeList()
     }
   }
+  goProfileLink(id: string):any {
+  return id===this.mainUser._id ? ['/profile'] : [`/profile`, id]
+ }
 }

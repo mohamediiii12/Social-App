@@ -2,21 +2,22 @@
 
 <nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
   <div class="our-container py-2 flex  items-center justify-between flex-wrap gap-y-2 ">
-  <a routerLink="/feed" class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer"> 
-      <div class="size-12 overflow-hidden rounded-lg"><img src="/Modern SocialHub logo design.png" class=" object-cover object-center" alt="website logo" /></div>
-      <span class="self-center  text-xl text-heading font-extrabold whitespace-nowrap hidden sm:block">SocialHub</span>
+  <a routerLink="/feed" class="flex items-center sm:space-x-3  cursor-pointer"> 
+      <div class="size-12 overflow-hidden rounded-lg">
+        <img src="/Modern SocialHub logo design.png" class=" object-cover object-center" alt="website logo" /></div>
+      <span class="self-center  text-xl text-heading font-extrabold whitespace-nowrap hidden sm:block">{{ 'NAVBAR.BRAND' | translate }}</span>
   </a>
 
   <div class="items-center justify-between flex  " id="navbar-user">
-    <ul class="font-extrabold text-sm flex  p-[5px]   border border-default rounded-lg bg-neutral-secondary-soft flex-row gap-x-1.5  rtl:space-x-reverse ">
+    <ul class="font-extrabold text-sm flex  p-[5px]   border border-default rounded-lg bg-neutral-secondary-soft flex-row gap-x-1.5">
       <li>
-        <a routerLink="/feed" routerLinkActive="!text-mainColorLight !bg-white hover:!text-mainColorLight !bg-white" class="block py-2 px-3 text-slate-600 rounded-lg  hover:bg-white  hover:text-slate-900 "><i class="far fa-house sm:me-2 text-[17px]"></i><span class="hidden sm:inline">Feed</span></a>
+        <a routerLink="/feed" routerLinkActive="!text-mainColorLight !bg-white hover:!text-mainColorLight !bg-white" class="block py-2 px-3  rtl:sm:px-1 rtl:md:px-3 text-slate-600 rounded-lg  hover:bg-white  hover:text-slate-900 "><i class="far fa-house sm:me-2 text-[17px]"></i><span class="hidden sm:inline">{{ 'NAVBAR.FEED' | translate }}</span></a>
       </li>
       <li>
-        <a routerLink="/profile" routerLinkActive="!text-mainColorLight !bg-white hover:!text-mainColorLight !bg-white" class="block py-2 px-3 text-slate-600 rounded-lg  hover:bg-white  hover:text-slate-900 "> <i class="far fa-user sm:me-2 text-[17px]"></i><span class="hidden sm:inline">Profile</span></a>
+        <a routerLink="/profile" routerLinkActive="!text-mainColorLight !bg-white hover:!text-mainColorLight !bg-white" class="block py-2 px-3  rtl:sm:px-2 rtl:md:px-3 text-slate-600 rounded-lg  hover:bg-white  hover:text-slate-900 "> <i class="far fa-user sm:me-2 text-[17px]"></i><span class="hidden sm:inline">{{ 'NAVBAR.PROFILE' | translate }}</span></a>
       </li>
       <li>
-        <a routerLink="/notifications" routerLinkActive="!text-mainColorLight !bg-white hover:!text-mainColorLight !bg-white" class="block py-2 px-3 text-slate-600 rounded-lg  hover:bg-white  hover:text-slate-900 "> <i class="far fa-comment sm:me-2 text-[17px]"></i><span class="hidden sm:inline">Notifications</span></a>
+        <a routerLink="/notifications" routerLinkActive="!text-mainColorLight !bg-white hover:!text-mainColorLight !bg-white" class="block py-2 px-3  rtl:sm:px-2 rtl:md:px-3 text-slate-600 rounded-lg  hover:bg-white  hover:text-slate-900 "> <i class="far fa-comment sm:me-2 text-[17px]"></i><span class="hidden sm:inline">{{ 'NAVBAR.NOTIFICATIONS' | translate }}</span></a>
       </li>
     </ul>
   </div>
@@ -37,13 +38,13 @@
         <ul class="p-2 text-sm text-body font-medium" aria-labelledby="user-menu-button">
           
           <li>
-            <a routerLink="/profile" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-slate-600 rounded"><i><i class="fas fa-user me-2 text-sm"></i></i>Profile</a>
+            <a routerLink="/profile" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-slate-600 rounded"><i><i class="fas fa-user me-2 text-sm"></i></i>{{ 'NAVBAR.PROFILE' | translate }}</a>
           </li>
           <li>
-            <a routerLink="/change" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-slate-600 rounded"><i><i class="fas fa-gear me-2 text-sm"></i></i>Settings</a>
+            <a routerLink="/change" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-slate-600 rounded"><i><i class="fas fa-gear me-2 text-sm"></i></i>{{ 'NAVBAR.SETTINGS' | translate }}</a>
           </li>
           <li>
-            <a (click)="logOut()" class="inline-flex items-center w-full p-2 hover:bg-red-50 hover:text-slate-600 rounded"> <i class="fas fa-sign-out-alt me-2 text-sm"></i>Sign out</a>
+            <a (click)="logOut()" class="inline-flex items-center w-full p-2 hover:bg-red-50 hover:text-slate-600 rounded"> <i class="fas fa-sign-out-alt me-2 text-sm"></i>{{ 'NAVBAR.SIGN_OUT' | translate }}</a>
           </li>
         </ul>
       </div>

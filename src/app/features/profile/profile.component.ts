@@ -9,10 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { SharedPostComponent } from "../../shared/ui/post/components/shared-post/shared-post.component";
 
 import { CustomTimePipe } from '../../shared/pipes/custom-time-pipe';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-profile',
-  imports: [RouterLink, FormsModule, SharedPostComponent,CustomTimePipe],
+  imports: [RouterLink, FormsModule, SharedPostComponent,CustomTimePipe,TranslatePipe],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css',
 })

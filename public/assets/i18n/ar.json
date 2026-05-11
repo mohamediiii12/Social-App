@@ -1,0 +1,314 @@
+{
+  "LANGUAGE": {
+    "TITLE": "اللغة",
+    "SUBTITLE": "اختر لغة العرض المفضلة لديك.",
+    "EN": "الانجليزية",
+    "AR": "العربية"
+  },
+  "NAVBAR": {
+    "BRAND": "SocialHub",
+    "FEED": "الرئيسية",
+    "PROFILE": "الملف الشخصي",
+    "NOTIFICATIONS": "الإشعارات",
+    "SETTINGS": "الإعدادات",
+    "SIGN_OUT": "تسجيل الخروج"
+  },
+  "LOGIN": {
+    "BRAND": "SocialHub",
+    "BRAND_SUBTITLE": "تواصل مع أصدقائك والعالم من حولك على Route Posts.",
+    "TAB_LOGIN": "تسجيل الدخول",
+    "TAB_REGISTER": "إنشاء حساب",
+    "TITLE": "تسجيل الدخول إلى Route Posts",
+    "SUBTITLE": "سجّل دخولك وواصل رحلتك الاجتماعية.",
+    "LOGIN_FIELD": {
+      "PLACEHOLDER": "اسم المستخدم أو البريد الإلكتروني",
+      "REQUIRED": "اسم المستخدم أو البريد الإلكتروني مطلوب.",
+      "MIN_LENGTH": "يجب أن يتكون اسم المستخدم أو البريد الإلكتروني من 3 أحرف على الأقل."
+    },
+    "PASSWORD_FIELD": {
+      "PLACEHOLDER": "كلمة المرور",
+      "REQUIRED": "كلمة المرور مطلوبة.",
+      "PATTERN": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل، وتشمل حرفاً كبيراً وصغيراً ورقماً ورمزاً خاصاً."
+    },
+    "SUBMIT": "تسجيل الدخول",
+    "FORGOT_PASSWORD": "نسيت كلمة المرور؟"
+  },
+  "REGISTER": {
+    "BRAND": "SocialHub",
+    "BRAND_SUBTITLE": "تواصل مع أصدقائك والعالم من حولك على Route Posts.",
+    "TAB_LOGIN": "تسجيل الدخول",
+    "TAB_REGISTER": "إنشاء حساب",
+    "TITLE": "إنشاء حساب جديد",
+    "SUBTITLE": "سريع وسهل.",
+    "ALREADY_HAVE_ACCOUNT": "لديك حساب بالفعل؟ سجّل الدخول",
+    "FULL_NAME": {
+      "PLACEHOLDER": "الاسم الكامل",
+      "REQUIRED": "الاسم الكامل مطلوب.",
+      "MIN_LENGTH": "يجب أن يتكون الاسم من 3 أحرف على الأقل"
+    },
+    "USERNAME": {
+      "PLACEHOLDER": "اسم المستخدم (اختياري)"
+    },
+    "EMAIL": {
+      "PLACEHOLDER": "البريد الإلكتروني",
+      "REQUIRED": "البريد الإلكتروني مطلوب.",
+      "INVALID": "يرجى إدخال بريد إلكتروني صحيح."
+    },
+    "GENDER": {
+      "PLACEHOLDER": "اختر الجنس",
+      "MALE": "ذكر",
+      "FEMALE": "أنثى",
+      "REQUIRED": "الجنس مطلوب."
+    },
+    "DATE_OF_BIRTH": {
+      "PLACEHOLDER": "تاريخ الميلاد",
+      "REQUIRED": "تاريخ الميلاد مطلوب."
+    },
+    "PASSWORD": {
+      "PLACEHOLDER": "كلمة المرور",
+      "REQUIRED": "كلمة المرور مطلوبة.",
+      "PATTERN": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل، وتشمل حرفاً كبيراً وصغيراً ورقماً ورمزاً خاصاً."
+    },
+    "RE_PASSWORD": {
+      "PLACEHOLDER": "تأكيد كلمة المرور",
+      "REQUIRED": "تأكيد كلمة المرور مطلوب.",
+      "NOT_MATCH": "يجب أن يتطابق تأكيد كلمة المرور مع كلمة المرور."
+    },
+    "SUBMIT": "إنشاء حساب جديد"
+  },
+  "CHANGE_PASSWORD": {
+    "TITLE": "تغيير كلمة المرور",
+    "SUBTITLE": "حافظ على أمان حسابك باستخدام كلمة مرور قوية.",
+    "CURRENT_PASSWORD": {
+      "LABEL": "كلمة المرور الحالية",
+      "PLACEHOLDER": "أدخل كلمة المرور الحالية",
+      "REQUIRED": "كلمة المرور مطلوبة."
+    },
+    "NEW_PASSWORD": {
+      "LABEL": "كلمة المرور الجديدة",
+      "PLACEHOLDER": "أدخل كلمة المرور الجديدة",
+      "REQUIRED": "كلمة المرور مطلوبة.",
+      "PATTERN": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل، وتشمل حرفاً كبيراً وصغيراً ورقماً ورمزاً خاصاً."
+    },
+    "CONFIRM_PASSWORD": {
+      "LABEL": "تأكيد كلمة المرور الجديدة",
+      "PLACEHOLDER": "أعد إدخال كلمة المرور الجديدة",
+      "REQUIRED": "تأكيد كلمة المرور مطلوب.",
+      "NOT_MATCH": "يجب أن يتطابق تأكيد كلمة المرور مع كلمة المرور."
+    },
+    "SUBMIT": "تغيير كلمة المرور",
+    "ERRORS": {
+      "INVALID_TOKEN": "كلمة المرور الحالية غير صحيحة أو غير مصرح لك، يرجى تسجيل الدخول مجدداً."
+    }
+  },
+  "FEED": {
+    "POST_PLACEHOLDER": "بم تفكر...",
+    "POST_BUTTON": "نشر",
+    "PHOTO_VIDEO": "صورة/فيديو",
+    "FEELING": "شعور/نشاط",
+    "PRIVACY": {
+      "PUBLIC": "عام",
+      "FOLLOWING": "المتابعون",
+      "ONLY_ME": "أنا فقط"
+    },
+    "POSTING": "جارٍ النشر...",
+    "LOADING_POSTS": "جارٍ تحميل المنشورات..."
+  },
+  "SIDE_LEFT": {
+    "FEED": "الرئيسية",
+    "MY_POSTS": "منشوراتي",
+    "COMMUNITY": "المجتمع",
+    "SAVED": "المحفوظات"
+  },
+  "SIDE_RIGHT": {
+    "TITLE": "أشخاص قد تعرفهم",
+    "SEARCH_PLACEHOLDER": "ابحث عن أصدقاء...",
+    "FOLLOW": "متابعة",
+    "FOLLOWING": "متابعة...",
+    "FOLLOWERS": "متابع",
+    "MUTUAL": "مشترك",
+    "VIEW_MORE": "عرض المزيد",
+    "NO_RESULTS": "لا يوجد مستخدمون مطابقون لبحثك."
+  },
+  "PROFILE": {
+    "MEMBER_BADGE": "عضو في Route Posts",
+    "ABOUT": "نبذة عني",
+    "EMAIL_ACTIVE": "نشط على Route Posts",
+    "MY_POSTS_LABEL": "منشوراتي",
+    "SAVED_POSTS_LABEL": "المنشورات المحفوظة",
+    "FOLLOWERS": "المتابعون",
+    "FOLLOWING": "يتابع",
+    "BOOKMARKS": "المحفوظات",
+    "TABS": {
+      "MY_POSTS": "منشوراتي",
+      "SAVED": "المحفوظات"
+    },
+    "VIEW_COVER": "عرض الغلاف",
+    "CHANGE_COVER": "تغيير الغلاف",
+    "REMOVE": "إزالة",
+    "VIEW_DETAILS": "عرض التفاصيل",
+    "PHOTO_MODAL": {
+      "TITLE": "ضبط صورة الملف الشخصي",
+      "SUBTITLE": "اسحب لإعادة التموضع واستخدم التكبير للإطار المثالي.",
+      "ZOOM": "تكبير",
+      "PRIVACY_LABEL": "خصوصية المنشور",
+      "CANCEL": "إلغاء",
+      "SAVE": "حفظ الصورة"
+    }
+  },
+  "USER_PROFILE": {
+    "BACK": "رجوع",
+    "FOLLOW": "متابعة",
+    "FOLLOWING": "تتم المتابعة",
+    "FOLLOW_LOADING": "جارٍ المتابعة...",
+    "UNFOLLOW_LOADING": "جارٍ التحديث...",
+    "NO_POSTS": "لا توجد منشورات"
+  },
+  "NOTIFICATIONS": {
+    "TITLE": "الإشعارات",
+    "SUBTITLE": "تحديثات فورية للإعجابات والتعليقات والمشاركات والمتابعات.",
+    "MARK_ALL": "تحديد الكل كمقروء",
+    "ALL": "الكل",
+    "UNREAD": "غير مقروء",
+    "LOAD_MORE": "تحميل المزيد من الإشعارات",
+    "LOADING_MORE": "جارٍ التحميل...",
+    "NO_UNREAD": "لا توجد إشعارات غير مقروءة.",
+    "MARK_AS_READ": "تحديد كمقروء",
+    "READ": "مقروء",
+    "ACTIONS": {
+      "LIKE_POST": "أعجب بمنشورك",
+      "COMMENT_POST": "علّق على منشورك",
+      "SHARE_POST": "شارك منشورك",
+      "FOLLOW_USER": "بدأ متابعتك"
+    }
+  },
+  "SUGGESTIONS": {
+    "BACK": "العودة إلى الرئيسية",
+    "TITLE": "جميع الأشخاص المقترحين",
+    "SEARCH_PLACEHOLDER": "ابحث بالاسم أو اسم المستخدم...",
+    "FOLLOW": "متابعة",
+    "FOLLOWING_LOADING": "متابعة...",
+    "FOLLOWERS": "متابع",
+    "MUTUAL": "مشترك",
+    "LOAD_MORE": "تحميل المزيد من المستخدمين",
+    "LOADING_MORE": "جارٍ التحميل...",
+    "NO_RESULTS": "لا يوجد مستخدمون مطابقون لبحثك."
+  },
+  "POST": {
+    "LIKE": "إعجاب",
+    "COMMENT": "تعليق",
+    "SHARE": "مشاركة",
+    "SAVE_POST": "حفظ المنشور",
+    "UNSAVE_POST": "إلغاء الحفظ",
+    "EDIT_POST": "تعديل المنشور",
+    "DELETE_POST": "حذف المنشور",
+    "VIEW_DETAILS": "عرض التفاصيل",
+    "SAVED_BADGE": "محفوظ",
+    "CANCEL": "إلغاء",
+    "SAVE_EDIT": "حفظ",
+    "TOP_COMMENT": "أبرز تعليق",
+    "VIEW_ALL_COMMENTS": "عرض كل التعليقات",
+    "LIKES_COUNT": "إعجاب",
+    "SHARES_COUNT": "مشاركة",
+    "COMMENTS_COUNT": "تعليق",
+    "UPDATED_PHOTO": "قام بتحديث صورة الملف الشخصي.",
+    "SHARE_MODAL": {
+      "TITLE": "مشاركة المنشور",
+      "PLACEHOLDER": "قل شيئاً عن هذا...",
+      "CANCEL": "إلغاء",
+      "SHARE_NOW": "مشاركة الآن",
+      "SHARING": "جارٍ المشاركة",
+      "ORIGINAL_POST": "المنشور الأصلي"
+    }
+  },
+  "COMMENTS": {
+    "TITLE": "التعليقات",
+    "MOST_RELEVANT": "الأكثر صلة",
+    "NEWEST": "الأحدث",
+    "PLACEHOLDER": "علّق باسم",
+    "NO_COMMENTS_TITLE": "لا توجد تعليقات بعد",
+    "NO_COMMENTS_SUBTITLE": "كن أول من يعلّق.",
+    "LOADING": "جارٍ تحميل التعليقات...",
+    "EDIT": "تعديل",
+    "DELETE": "حذف",
+    "SAVE": "حفظ",
+    "CANCEL": "إلغاء",
+    "LIKE": "إعجاب",
+    "REPLY": "رد",
+    "HIDE_REPLIES": "إخفاء الردود",
+    "CONTENT_REQUIRED": "المحتوى مطلوب على الأقل",
+    "VIEW_MORE": "عرض المزيد من التعليقات",
+    "LOADING_MORE": "جارٍ التحميل..."
+  },
+  "REPLAYS": {
+    "LOADING": "جارٍ تحميل الردود",
+    "NO_REPLAYS": "لا توجد ردود",
+    "VIEW_MORE": "عرض المزيد من الردود",
+    "LOADING_MORE": "جارٍ التحميل...",
+    "LIKE": "إعجاب",
+    "EDIT": "تعديل",
+    "DELETE": "حذف",
+    "SAVE": "حفظ",
+    "CANCEL": "إلغاء",
+    "CONTENT_REQUIRED": "المحتوى مطلوب على الأقل"
+  },
+  "LIKES_LIST": {
+    "TITLE": "الأشخاص الذين تفاعلوا",
+    "LOADING": "جارٍ تحميل الإعجابات..."
+  },
+  "POST_DETAILS": {
+    "BACK": "رجوع"
+  },
+  "FEATURES": {
+    "TITLE": "مميزات المنصة",
+    "CHAT": {
+      "TITLE": "دردشة فورية",
+      "SUBTITLE": "مراسلة لحظية"
+    },
+    "MEDIA": {
+      "TITLE": "مشاركة الوسائط",
+      "SUBTITLE": "صور ومقاطع فيديو"
+    },
+    "ALERTS": {
+      "TITLE": "تنبيهات ذكية",
+      "SUBTITLE": "ابقَ على اطلاع"
+    },
+    "COMMUNITIES": {
+      "TITLE": "المجتمعات",
+      "SUBTITLE": "اعثر على مجتمعك"
+    }
+  },
+  "STATS": {
+    "USERS": {
+      "COUNT": "+2M",
+      "LABEL": "مستخدم نشط"
+    },
+    "POSTS": {
+      "COUNT": "+10M",
+      "LABEL": "منشور تمت مشاركته"
+    },
+    "MESSAGES": {
+      "COUNT": "+50M",
+      "LABEL": "رسالة أُرسلت"
+    }
+  },
+  "REVIEW": {
+    "QUOTE": "غيّر SocialHub طريقة تواصلي مع الأصدقاء واكتشافي لمجتمعات جديدة بشكل كامل. التجربة سلسة للغاية!",
+    "AUTHOR": "أليكس جونسون",
+    "ROLE": "مصمم منتجات"
+  },
+  "HEADER": {
+    "WELCOME_BACK_TITLE": "مرحباً بعودتك",
+    "WELCOME_BACK_HIGHLIGHT": "إلى تطبيق SocialHub",
+    "WELCOME_BACK_SUBTITLE": "سجّل دخولك للتواصل مع الناس حول العالم",
+    "CONNECT_TITLE": "تواصل مع",
+    "CONNECT_HIGHLIGHT": "أشخاص رائعين",
+    "CONNECT_SUBTITLE": "انضم إلى ملايين المستخدمين الذين يتشاركون اللحظات والأفكار ويبنون علاقات حقيقية كل يوم"
+  },
+  "NOT_FOUND": {
+    "MESSAGE": "الصفحة غير موجودة"
+  },
+  "FORGOT_PASSWORD": {
+    "MESSAGE": "نسيت كلمة المرور"
+  }
+}

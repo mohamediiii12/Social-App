@@ -4,11 +4,13 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, ReactiveFormsModu
 import { Subscription } from 'rxjs';
 import { ChangePassResponseSuccess, passBody } from '../../core/models/change-pass.interface';
 import { Router } from '@angular/router';
+import { MyTranslateService } from '../../core/services/my-translate.service';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-change-password',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,TranslatePipe],
   templateUrl: './change-password.component.html',
   styleUrl: './change-password.component.css',
 })
@@ -16,6 +18,8 @@ export class ChangePasswordComponent implements OnInit {
   private readonly authService = inject(AuthService);
   private readonly formBuilder = inject(FormBuilder);
   private readonly router = inject(Router);
+  private readonly myTranslateService = inject(MyTranslateService);
+  readonly translate = inject(TranslateService);
   looding: boolean = false;
   errorMessage: string = '';
   successMessage: string = '';
@@ -79,5 +83,8 @@ export class ChangePasswordComponent implements OnInit {
   this.changePasswordForm.markAllAsTouched();
 }
   
+  }
+  changee(lang: string): void {
+    this.myTranslateService.changeLang(lang);
   }
 }

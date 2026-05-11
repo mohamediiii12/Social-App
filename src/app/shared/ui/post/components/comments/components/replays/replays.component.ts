@@ -6,10 +6,11 @@ import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommentsService } from '../../services/comments.service';
 import { RouterLink } from "@angular/router";
 import { RelativeTimePipe } from '../../../../../../pipes/relative-time-pipe';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-replays',
-  imports: [ReactiveFormsModule, RouterLink,RelativeTimePipe],
+  imports: [ReactiveFormsModule, RouterLink,RelativeTimePipe,TranslatePipe],
   templateUrl: './replays.component.html',
   styleUrl: './replays.component.css',
 })
@@ -20,6 +21,7 @@ export class ReplaysComponent implements OnInit {
   @Input() commentId!: string
   @Input() postId!: string
   @Input() mainUser!: LoginUser
+  @Input() postCreatorId!: string
   fileImg: string | ArrayBuffer | null | undefined;
   content: FormControl = new FormControl('', Validators.required)
   editcontent: FormControl = new FormControl('', Validators.required)

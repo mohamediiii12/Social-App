@@ -1,168 +1,121 @@
 <section class="space-y-4">
-   <form #postForm (submit)="createPost($event,postForm)"
-      class="w-full bg-white rounded-[16px] shadow-sm border border-slate-200 p-4 font-sans flex flex-col">
-      <div class="flex items-center gap-3 mb-3">
-         <img [src]="mainUser.photo" [alt]="mainUser.name"
-            class="cursor-pointer size-11 rounded-full object-cover shrink-0 bg-slate-100 border border-slate-50" />
-
-         <div>
-            <span class="text-[15px] font-bold text-slate-900 leading-tight">{{mainUser.name}}</span>
-
-            <div
-               class="flex p-1 w-fit items-center bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body">
-               <i class="fa-solid fa-earth-americas text-[11px] text-slate-600"></i>
-
-               <select [formControl]="privacy"
-                  class="border-none bg-transparent cursor-pointer ring-0 py-0 px-2 text-xs">
-                  <option value="public">public</option>
-                  <option value="following">followers</option>
-                  <option value="only_me">only me</option>
-               </select>
-            </div>
-         </div>
+  <form #postForm (submit)="createPost($event,postForm)"
+    class="w-full bg-white rounded-[16px] shadow-sm border border-slate-200 p-4 font-sans flex flex-col">
+    <div class="flex items-center gap-3 mb-3">
+      <img [src]="mainUser.photo" [alt]="mainUser.name"
+        class="cursor-pointer size-11 rounded-full object-cover shrink-0 bg-slate-100 border border-slate-50" />
+      <div>
+        <span class="text-[15px] font-bold text-slate-900 leading-tight">{{ mainUser.name }}</span>
+        <div class="flex p-1 w-fit items-center bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base shadow-xs">
+          <i class="fa-solid fa-earth-americas text-[11px] text-slate-600"></i>
+          <select [formControl]="privacy" class="border-none bg-transparent cursor-pointer ring-0 py-0 px-2 text-xs">
+            <option value="public">{{ 'FEED.PRIVACY.PUBLIC' | translate }}</option>
+            <option value="following">{{ 'FEED.PRIVACY.FOLLOWING' | translate }}</option>
+            <option value="only_me">{{ 'FEED.PRIVACY.ONLY_ME' | translate }}</option>
+          </select>
+        </div>
       </div>
+    </div>
 
-      <div class="mb-4">
-         <textarea [formControl]="content"
-            class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-[15px] text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-blue-50 focus:border-blue-300 transition-all resize-y min-h-30"
-            placeholder="What's on your mind... {{mainUser.name.split(' ')[0]}}?"
-            aria-label="Create a new post"></textarea>
-      </div>
-      @if(content.invalid && content.touched && !saveFile){
-      <p class="text-red-500 text-sm mb-3">At least Content is required</p>
-      }
-      @if(fileImg){
+    <div class="mb-4">
+      <textarea [formControl]="content"
+        class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-[15px] text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-blue-50 focus:border-blue-300 transition-all resize-y min-h-30"
+        [placeholder]="('FEED.POST_PLACEHOLDER' | translate) + ' ' + mainUser.name.split(' ')[0] + '?'"
+        aria-label="Create a new post"></textarea>
+    </div>
+    @if (content.invalid && content.touched && !saveFile) {
+      <p class="text-red-500 text-sm mb-3">{{ 'COMMENTS.CONTENT_REQUIRED' | translate }}</p>
+    }
+    @if (fileImg) {
       <div class="relative">
-         <img [src]="fileImg" class="w-full max-h-screen  object-contain  rounded mb-3" alt="">
-         <button type="button" (click)=" fileImg=null;"
-            class="size-7 absolute top-2 right-2 bg-slate-600/50 hover:bg-slate-600 cursor-pointer text-white rounded-full  flexs items-center justify-center transition-opacity">
-            <i class="fa-solid fa-xmark fa-sm"></i>
-         </button>
+        <img [src]="fileImg" class="w-full max-h-screen object-contain rounded mb-3" alt="">
+        <button type="button" (click)="fileImg=null;"
+          class="size-7 absolute top-2 right-2 bg-slate-600/50 hover:bg-slate-600 cursor-pointer text-white rounded-full flex items-center justify-center transition-opacity">
+          <i class="fa-solid fa-xmark fa-sm"></i>
+        </button>
       </div>
-      }
-      <hr class="border-t border-slate-800 mb-4" />
+    }
+    <hr class="border-t border-slate-800 mb-4" />
+    <div class="flex items-center flex-wrap justify-between">
+      <div class="flex justify-start">
+        <input (change)="getphoto($event)" type="file" id="file" class="hidden" />
+        <label for="file" class="flex cursor-pointer items-center gap-2 text-slate-600 hover:bg-slate-100 px-2 py-2 rounded-xl transition-colors group">
+          <i class="fa-regular fa-image text-[#22c55e] text-[1.1rem] group-hover:scale-110 transition-transform"></i>
+          <span class="text-[14px] font-semibold text-slate-500 hidden sm:inline">{{ 'FEED.PHOTO_VIDEO' | translate }}</span>
+        </label>
+        <button type="button" class="cursor-pointer flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100">
+          <i class="far fa-face-smile text-amber-500 text-[16px]"></i>
+          <span class="hidden sm:inline">{{ 'FEED.FEELING' | translate }}</span>
+        </button>
+      </div>
+      <button type="submit"
+        class="cursor-pointer bg-mainColorLight hover:bg-mainColor text-white px-5 py-2 rounded-xl font-bold text-[14px] flex items-center gap-2 focus:ring-4 focus:ring-blue-200 outline-none">
+        {{ 'FEED.POST_BUTTON' | translate }}
+        <i class="fa-regular fa-paper-plane text-sm"></i>
+      </button>
+    </div>
+  </form>
 
-      <div class="flex items-center flex-wrap justify-between">
-         <div class="flex justify-start">
-            <input (change)="getphoto($event)" type="file" id="file" class="hidden" />
-            <label for="file"
-               class="flex cursor-pointer items-center gap-2 text-slate-600 hover:bg-slate-100 px-2 py-2 rounded-xl transition-colors group">
-               <i
-                  class="fa-regular fa-image text-[#22c55e] text-[1.1rem] group-hover:scale-110 transition-transform"></i>
-               <span class="text-[14px] font-semibold text-slate-500 hidden sm:inline">Photo/video</span>
-            </label>
-            <button type="button"
-               class="cursor-pointer flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100"><i
-                  class="far fa-face-smile text-amber-500 text-[16px]"></i><span
-                  class="hidden sm:inline">Feeling/activity</span></button>
-         </div>
-         <button type="submit"
-            class="cursor-pointer bg-mainColorLight hover:bg-mainColor text-white px-5 py-2 rounded-xl font-bold text-[14px] flex items-center gap-2 focus:ring-4 focus:ring-blue-200 outline-none">
-            Post
-            <i class="fa-regular fa-paper-plane text-sm"></i>
-         </button>
-      </div>
-   </form>
-   @if(isCreating){
-   <div class="bg-white rounded-[16px] shadow-sm border border-slate-200 p-4  ">
+  @if (isCreating) {
+    <div class="bg-white rounded-[16px] shadow-sm border border-slate-200 p-4">
       <div class="flex justify-between mb-1">
-         <span class="text-sm font-medium text-body">Posting...</span>
-         <span class="text-sm font-medium text-body">
-            {{ progressValue}}%
-         </span>
+        <span class="text-sm font-medium text-body">{{ 'FEED.POSTING' | translate }}</span>
+        <span class="text-sm font-medium text-body">{{ progressValue }}%</span>
       </div>
-
       <div class="w-full bg-neutral-quaternary rounded-full h-2">
-         <div class="bg-brand h-2 rounded-full transition-all duration-300" [style.width.%]="progressValue">
-         </div>
+        <div class="bg-brand h-2 rounded-full transition-all duration-300" [style.width.%]="progressValue"></div>
       </div>
-   </div>
-   }
+    </div>
+  }
 
-   @if(looding){
-   <div class="flex animate-pulse my-10">
-      <div class="shrink-0">
-         <span class="size-12 block bg-mainColor/20 rounded-full"></span>
-      </div>
-
+  @if (looding) {
+    <div class="flex animate-pulse my-10">
+      <div class="shrink-0"><span class="size-12 block bg-mainColor/20 rounded-full"></span></div>
       <div class="ms-4 mt-2 w-full">
-         <p class="h-4 bg-mainColor/20 rounded-full" style="width: 40%;"></p>
-
-         <ul class="mt-5 space-y-3">
-            <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
-            <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
-            <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
-            <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
-         </ul>
+        <p class="h-4 bg-mainColor/20 rounded-full" style="width: 40%;"></p>
+        <ul class="mt-5 space-y-3">
+          <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
+          <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
+          <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
+          <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
+        </ul>
       </div>
-   </div>
-   <div class="flex animate-pulse my-10">
-      <div class="shrink-0">
-         <span class="size-12 block bg-mainColor/20 rounded-full"></span>
-      </div>
-
+    </div>
+    <div class="flex animate-pulse my-10">
+      <div class="shrink-0"><span class="size-12 block bg-mainColor/20 rounded-full"></span></div>
       <div class="ms-4 mt-2 w-full">
-         <p class="h-4 bg-mainColor/20 rounded-full" style="width: 40%;"></p>
-
-         <ul class="mt-5 space-y-3">
-            <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
-            <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
-            <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
-            <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
-         </ul>
+        <p class="h-4 bg-mainColor/20 rounded-full" style="width: 40%;"></p>
+        <ul class="mt-5 space-y-3">
+          <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
+          <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
+          <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
+          <li class="w-full h-4 bg-mainColor/20 rounded-full"></li>
+        </ul>
       </div>
-   </div>
-   }@else{
-      @if (feedContentt==='all') {
-          @for (post of allPosts; track $index) {
-
-         <app-post
-         [post]="post"
-         [mainUser]="mainUser"
-         (like)="likeUnLike($event)"
-         (delete)="deletePost($event)"
-         (bookmark)="saveUnsave($event)"
-         (update)="updatePost($event)"  
-         ></app-post>
-         }
-      }@else if (feedContentt==='following') {
-         @for (post of followingPosts; track $index) {
-         <app-post
-         [post]="post"
-         [mainUser]="mainUser"
-         (like)="likeUnLike($event)"
-         (delete)="deletePost($event)"
-         (bookmark)="saveUnsave($event)"
-         (update)="updatePost($event)"  
-         ></app-post>
-         }
-      }@else if (feedContentt==='me') {
-         @for (post of mePosts; track $index) {
-         <app-post
-         [post]="post"
-         [mainUser]="mainUser"
-         (like)="likeUnLike($event)"
-         (delete)="deletePost($event)"
-         (bookmark)="saveUnsave($event)"
-         (update)="updatePost($event)"  
-         ></app-post>
-         }
-      }@else if (feedContentt==='bookmarks') {
-         @for (post of bookmarks; track $index) {
-         <app-post
-         [post]="post"
-         [mainUser]="mainUser"
-         (like)="likeUnLike($event)"
-         (delete)="deletePost($event)"
-         (bookmark)="saveUnsave($event)"
-         (update)="updatePost($event)"  
-         ></app-post>
-         }
+    </div>
+  } @else {
+    @if (feedContentt==='all') {
+      @for (post of allPosts; track $index) {
+        <app-post [post]="post" [mainUser]="mainUser" (like)="likeUnLike($event)" (delete)="deletePost($event)" (bookmark)="saveUnsave($event)" (update)="updatePost($event)"></app-post>
       }
-   }
-   @if(hasMore){
-      <div #loadingMorePosts class="text-center mx-auto rounded-xl border border-slate-300 px-7 py-1 w-fit bg-gray-100 my-3 text-sm">
-      <p><i class="fas fa-spinner fa-spin"></i> loading Posts...</p>
-   </div>
-   }
+    } @else if (feedContentt==='following') {
+      @for (post of followingPosts; track $index) {
+        <app-post [post]="post" [mainUser]="mainUser" (like)="likeUnLike($event)" (delete)="deletePost($event)" (bookmark)="saveUnsave($event)" (update)="updatePost($event)"></app-post>
+      }
+    } @else if (feedContentt==='me') {
+      @for (post of mePosts; track $index) {
+        <app-post [post]="post" [mainUser]="mainUser" (like)="likeUnLike($event)" (delete)="deletePost($event)" (bookmark)="saveUnsave($event)" (update)="updatePost($event)"></app-post>
+      }
+    } @else if (feedContentt==='bookmarks') {
+      @for (post of bookmarks; track $index) {
+        <app-post [post]="post" [mainUser]="mainUser" (like)="likeUnLike($event)" (delete)="deletePost($event)" (bookmark)="saveUnsave($event)" (update)="updatePost($event)"></app-post>
+      }
+    }
+  }
+
+  @if (hasMore) {
+    <div #loadingMorePosts class="text-center mx-auto rounded-xl border border-slate-300 px-7 py-1 w-fit bg-gray-100 my-3 text-sm">
+      <p><i class="fas fa-spinner fa-spin"></i> {{ 'FEED.LOADING_POSTS' | translate }}</p>
+    </div>
+  }
 </section>

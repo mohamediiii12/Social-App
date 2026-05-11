@@ -8,10 +8,11 @@ import { LoginUser } from '../../core/models/login/login.interface';
 import { DataProfile } from './models/user-profile.interface';
 import { Post } from '../../core/models/posts/post.interface';
 import { PostComponent } from "../../shared/ui/post/post.component";
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-user-profile',
-  imports: [PostComponent],
+  imports: [PostComponent,TranslatePipe],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css',
 })

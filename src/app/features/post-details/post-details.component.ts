@@ -5,10 +5,11 @@ import { PostService } from '../../core/services/post.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from '../../core/models/posts/post.interface';
 import { Location } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-post-details',
-  imports: [PostComponent],
+  imports: [PostComponent,TranslatePipe],
   templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.css',
 })

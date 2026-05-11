@@ -4,10 +4,12 @@ import { Router, RouterLink } from '@angular/router';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ScrollDownButtonComponent } from "../../shared/ui/scroll-down-button/scroll-down-button.component";
 import { Subscription } from 'rxjs';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-register',
-  imports: [RouterLink, ScrollDownButtonComponent, ReactiveFormsModule],
+  imports: [RouterLink, ScrollDownButtonComponent, ReactiveFormsModule, TranslatePipe],
+
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
 })

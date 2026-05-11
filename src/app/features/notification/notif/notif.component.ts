@@ -3,10 +3,11 @@ import { Notification } from '../models/get-notifications.interface';
 import { RouterLink } from "@angular/router";
 import { LoginUser } from '../../../core/models/login/login.interface';
 import { RelativeTimePipe } from '../../../shared/pipes/relative-time-pipe';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-notif',
-  imports: [RouterLink,RelativeTimePipe],
+  imports: [RouterLink,RelativeTimePipe,TranslatePipe],
   templateUrl: './notif.component.html',
   styleUrl: './notif.component.css',
 })

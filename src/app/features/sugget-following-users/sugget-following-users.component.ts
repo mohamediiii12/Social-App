@@ -4,10 +4,12 @@ import { Suggestion } from '../../core/models/suggest-users/suggest-users.interf
 import { RouterLink } from "@angular/router";
 import { FormsModule } from '@angular/forms';
 import { LoginUser } from '../../core/models/login/login.interface';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sugget-following-users',
-  imports: [RouterLink, FormsModule],
+  imports: [RouterLink, FormsModule,TranslatePipe],
+
   templateUrl: './sugget-following-users.component.html',
   styleUrl: './sugget-following-users.component.css',
 })

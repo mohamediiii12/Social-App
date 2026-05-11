@@ -7,10 +7,11 @@ import { LikeResponseSuccess } from '../../../../core/models/posts/like-unlike.i
 import { Input } from '@angular/core';
 import { Bookmark } from '../../../../core/models/bockMarks/book-marks.interface';
 import { PostComponent } from "../../../../shared/ui/post/post.component";
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-feed-content',
-  imports: [ReactiveFormsModule, PostComponent],
+  imports: [ReactiveFormsModule, PostComponent,TranslatePipe],
   templateUrl: './feed-content.component.html',
   styleUrl: './feed-content.component.css',
 })

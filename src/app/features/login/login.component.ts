@@ -6,10 +6,11 @@ import { AuthService } from '../../core/auth/services/auth.service';
 import { Subscription } from 'rxjs';
 
 import { LoginResponse, LoginSuccess} from '../../core/models/login/login.interface';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterLink, ScrollDownButtonComponent, ReactiveFormsModule],
+  imports: [RouterLink, ScrollDownButtonComponent, ReactiveFormsModule,TranslatePipe],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })

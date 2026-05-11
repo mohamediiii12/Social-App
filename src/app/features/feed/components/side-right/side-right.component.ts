@@ -4,10 +4,11 @@ import { Suggestion } from '../../../../core/models/suggest-users/suggest-users.
 import { RouterLink } from "@angular/router";
 import { FormsModule } from '@angular/forms';
 import { LoginUser } from '../../../../core/models/login/login.interface';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-side-right',
-  imports: [RouterLink,FormsModule],
+  imports: [RouterLink,FormsModule,TranslatePipe],
   templateUrl: './side-right.component.html',
   styleUrl: './side-right.component.css',
 })

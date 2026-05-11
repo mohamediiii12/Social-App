@@ -3,10 +3,11 @@ import { Component, HostListener, inject, OnChanges, OnInit } from '@angular/cor
 import { initFlowbite } from 'flowbite';
 import { Router, RouterLink, RouterLinkActive } from "@angular/router";
 import { AuthService } from '../../../../core/auth/services/auth.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive,TranslatePipe],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })

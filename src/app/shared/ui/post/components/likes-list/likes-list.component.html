@@ -1,34 +1,33 @@
 @if (postLikesCount) {
-   <div class="overlay fixed inset-0 z-[72] flex items-center justify-center bg-slate-900/50  p-4">
-   <div class="inside w-full max-w-[520px] rounded-2xl border border-slate-200 bg-white ">
+  <div class="overlay fixed inset-0 z-[72] flex items-center justify-center bg-slate-900/50 p-4">
+    <div class="inside w-full max-w-[520px] rounded-2xl border border-slate-200 bg-white">
       <div class="flex items-center justify-between border-b border-slate-200 px-4 py-3">
-         <div class="flex items-center gap-2"><i class="fas fa-user-group text-mainColorLight"></i>
-            <h4 class="text-base font-extrabold text-slate-900">People who reacted</h4>
-         </div>
-         <button type="button"  (click)="closeList()"
-            class="inline-flex h-8 w-8 items-center justify-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-700"><i
-               class="fas fa-xmark"></i>
-         </button>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-user-group text-mainColorLight"></i>
+          <h4 class="text-base font-extrabold text-slate-900">{{ 'LIKES_LIST.TITLE' | translate }}</h4>
+        </div>
+        <button type="button" (click)="closeList()"
+          class="inline-flex h-8 w-8 items-center justify-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-700">
+          <i class="fas fa-xmark"></i>
+        </button>
       </div>
       <div class="max-h-[420px] overflow-y-auto px-2 py-2">
-         <div class="space-y-1">
-           @if (loadingLikes) {
-            <p class="w-full text-center py-36 text-slate-500">Loading Likes...</p>
-           }@else {
-             @for (like of postLikes; track like._id) {
-               <a class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-slate-100"
-               [routerLink]="[]" data-discover="true">
-               <img [alt]="like.name" class="h-10 w-10 rounded-full object-cover"
-                  [src]="like.photo">
-               <div class="min-w-0">
-                  <p class="truncate text-sm font-bold text-slate-900">{{like.name}}</p>
-                  <p class="truncate text-xs text-slate-500">@{{like.username}}</p>
-               </div>
-            </a>
+        <div class="space-y-1">
+          @if (loadingLikes) {
+            <p class="w-full text-center py-36 text-slate-500">{{ 'LIKES_LIST.LOADING' | translate }}</p>
+          } @else {
+            @for (like of postLikes; track like._id) {
+              <a class="flex items-center gap-3 rounded-xl px-3 py-2 transition hover:bg-slate-100" [routerLink]="[]">
+                <img [alt]="like.name" class="h-10 w-10 rounded-full object-cover" [src]="like.photo">
+                <div class="min-w-0">
+                  <p class="truncate text-sm font-bold text-slate-900">{{ like.name }}</p>
+                  <p class="truncate text-xs text-slate-500">@{{ like.username }}</p>
+                </div>
+              </a>
             }
-           }
-         </div>
+          }
+        </div>
       </div>
-   </div>
-</div>
+    </div>
+  </div>
 }

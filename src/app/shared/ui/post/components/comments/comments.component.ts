@@ -6,16 +6,18 @@ import { LoginUser } from '../../../../../core/models/login/login.interface';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from "@angular/router";
 import { RelativeTimePipe } from '../../../../pipes/relative-time-pipe';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-comments',
-  imports: [ReplaysComponent, ReactiveFormsModule, RouterLink,RelativeTimePipe],
+  imports: [ReplaysComponent, ReactiveFormsModule, RouterLink,RelativeTimePipe,TranslatePipe],
   templateUrl: './comments.component.html',
   styleUrl: './comments.component.css',
 })
 export class CommentsComponent implements OnInit {
   private readonly commentsService = inject(CommentsService)
   @Input() id!: string
+  @Input() postCreatorId!: string
   comments: Comment[] = [];
   fileImg: string | ArrayBuffer | null | undefined;
   content: FormControl = new FormControl('', Validators.required)

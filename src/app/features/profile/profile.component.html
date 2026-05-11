@@ -19,16 +19,16 @@
                   class="pointer-events-none absolute right-2 top-2 z-10 flex max-w-[90%] flex-wrap items-center justify-end gap-1.5 opacity-100 transition duration-200 sm:right-3 sm:top-3 sm:max-w-none sm:gap-2 sm:opacity-0 sm:group-hover/cover:opacity-100 sm:group-focus-within/cover:opacity-100">
                   <button type="button" (click)="openImg(user.cover)"
                      class="pointer-events-auto inline-flex items-center gap-1 rounded-lg bg-black/45 px-2 py-1 text-[11px] font-bold text-white backdrop-blur transition hover:bg-black/60 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs"><i
-                        class="fas fa-expand"></i>View cover
+                        class="fas fa-expand"></i>{{'PROFILE.VIEW_COVER' | translate}}
                   </button>
                   <label
                      class="pointer-events-auto inline-flex cursor-pointer items-center gap-1 rounded-lg bg-black/45 px-2 py-1 text-[11px] font-bold text-white backdrop-blur transition hover:bg-black/60 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs"><i
-                        class="far fa-camera"></i>Change cover
+                        class="far fa-camera"></i>{{'PROFILE.CHANGE_COVER' | translate}}
                      <input accept="image/*" class="hidden" type="file">
                   </label>
                   <button type="button"
                      class="pointer-events-auto inline-flex items-center gap-1 rounded-lg bg-black/45 px-2 py-1 text-[11px] font-bold text-white backdrop-blur transition hover:bg-black/60 disabled:cursor-not-allowed disabled:opacity-60 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs">
-                     <i class="fas fa-trash"></i>Remove</button>
+                     <i class="fas fa-trash"></i>{{'PROFILE.REMOVE' | translate}}</button>
                </div>
             </div>
             <div class="relative -mt-12 px-3 pb-5 sm:-mt-16 sm:px-8 sm:pb-6">
@@ -58,24 +58,24 @@
                               <p class="mt-1 text-lg font-semibold text-slate-500 sm:text-xl">@{{user.username}}</p>
                               <div
                                  class="mt-3 inline-flex items-center gap-2 rounded-full border border-[#d7e7ff] bg-[#eef6ff] px-3 py-1 text-xs font-bold text-[#0b57d0]">
-                                 <i class="fas fa-crown"></i>Route Posts member
+                                 <i class="fas fa-crown"></i>{{'PROFILE.MEMBER_BADGE'|translate}}
                               </div>
                            </div>
                         </div>
                      </div>
                      <div class="grid w-full grid-cols-3 gap-2 lg:w-[520px]">
                         <div class="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center sm:px-4 sm:py-4">
-                           <p class="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">Followers
+                           <p class="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">{{'PROFILE.FOLLOWERS'|translate}}
                            </p>
                            <p class="mt-1 text-2xl font-black text-slate-900 sm:text-3xl">{{user.followersCount}}</p>
                         </div>
                         <div class="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center sm:px-4 sm:py-4">
-                           <p class="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">Following
+                           <p class="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">{{'PROFILE.FOLLOWING'|translate}}
                            </p>
                            <p class="mt-1 text-2xl font-black text-slate-900 sm:text-3xl">{{user.followingCount}}</p>
                         </div>
                         <div class="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center sm:px-4 sm:py-4">
-                           <p class="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">Bookmarks
+                           <p class="text-[11px] font-bold uppercase tracking-wide text-slate-500 sm:text-xs">{{'PROFILE.BOOKMARKS'|translate}}
                            </p>
                            <p class="mt-1 text-2xl font-black text-slate-900 sm:text-3xl">{{user.bookmarksCount}}</p>
                         </div>
@@ -86,16 +86,16 @@
                         <h3 class="text-sm font-extrabold text-slate-800">About</h3>
                         <div class="mt-3 space-y-2 text-sm text-slate-600">
                            <p class="flex items-center gap-2"><i class="far fa-envelope"></i>{{user.email}}</p>
-                           <p class="flex items-center gap-2"><i class="fas fa-user-group"></i>Active on Route Posts</p>
+                           <p class="flex items-center gap-2"><i class="fas fa-user-group"></i>{{'PROFILE.EMAIL_ACTIVE'|translate}}</p>
                         </div>
                      </div>
                      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
                         <div class="rounded-2xl border border-[#dbeafe] bg-[#f6faff] px-4 py-3">
-                           <p class="text-xs font-bold uppercase tracking-wide text-[#1f4f96]">My posts</p>
+                           <p class="text-xs font-bold uppercase tracking-wide text-[#1f4f96]">{{'PROFILE.MY_POSTS_LABEL'|translate}}</p>
                            <p class="mt-1 text-2xl font-black text-slate-900">{{posts.length}}</p>
                         </div>
                         <div class="rounded-2xl border border-[#dbeafe] bg-[#f6faff] px-4 py-3">
-                           <p class="text-xs font-bold uppercase tracking-wide text-[#1f4f96]">Saved posts</p>
+                           <p class="text-xs font-bold uppercase tracking-wide text-[#1f4f96]">{{'PROFILE.SAVED_POSTS_LABEL'|translate}}</p>
                            <p class="mt-1 text-2xl font-black text-slate-900">{{user.bookmarksCount}}</p>
                         </div>
                      </div>
@@ -111,17 +111,17 @@
                   @if (postsType==='me') {
                   <button (click)="switchPostsType('me')"
                      class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition bg-white text-mainColorLight shadow-sm"><i
-                        class="far fa-file-text"></i>My Posts</button>
+                        class="far fa-file-text"></i>{{'PROFILE.TABS.MY_POSTS'|translate}}</button>
                   <button (click)="switchPostsType('saved')"
                      class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition text-slate-600 hover:text-slate-900"><i
-                        class="far fa-bookmark"></i>Saved</button>
+                        class="far fa-bookmark"></i>{{'PROFILE.TABS.SAVED'|translate}}</button>
                   }@else if (postsType==='saved') {
                   <button (click)="switchPostsType('me')"
                      class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition text-slate-600 hover:text-slate-900"><i
-                        class="far fa-file-text"></i>My Posts</button>
+                        class="far fa-file-text"></i>{{'PROFILE.TABS.MY_POSTS'|translate}}</button>
                   <button (click)="switchPostsType('saved')"
                      class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition bg-white text-mainColorLight shadow-sm"><i
-                        class="far fa-bookmark"></i>Saved</button>
+                        class="far fa-bookmark"></i>{{'PROFILE.TABS.SAVED'|translate}}</button>
                   }
                </div>
                <span
@@ -146,8 +146,7 @@
                               <p class="truncate text-xs font-semibold text-slate-500 hover:underline cursor-pointer" [routerLink]="goProfileLink(post.user._id)">@{{post.user.username}}</p>
                            </div>
                         </div><button [routerLink]="['/postDetails', post._id]"
-                           class="rounded-md px-2 py-1 text-xs font-bold text-mainColorLight transition hover:bg-[#e7f3ff]">View
-                           details</button>
+                           class="rounded-md px-2 py-1 text-xs font-bold text-mainColorLight transition hover:bg-[#e7f3ff]">{{'PROFILE.VIEW_DETAILS'|translate}}</button>
                      </div>
                      <div class="pt-3">
                         @if (post.body) {
@@ -172,11 +171,11 @@
                      class="flex flex-col gap-2 border-t border-slate-200 px-4 py-3 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
                      <div class="flex flex-wrap items-center gap-3 sm:gap-5"><span
                            class="inline-flex items-center gap-2 font-semibold"><i
-                              class="far fa-thumbs-up text-mainColorLight"></i>{{post.likesCount}} likes</span><span
+                              class="far fa-thumbs-up text-mainColorLight"></i>{{post.likesCount}} {{'POST.LIKE'|translate}}</span><span
                            class="inline-flex items-center gap-2 font-semibold "><i
-                              class="fas fa-repeat text-mainColorLight"></i>{{post.sharesCount}} shares</span><span
+                              class="fas fa-repeat text-mainColorLight"></i>{{post.sharesCount}} {{'POST.SHARE'|translate}}</span><span
                            class="inline-flex items-center gap-2 font-semibold"><i
-                              class="far fa-comment text-mainColorLight"></i>{{post.commentsCount}} comments</span>
+                              class="far fa-comment text-mainColorLight"></i>{{post.commentsCount}} {{'POST.COMMENT'|translate}}</span>
                      </div><span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500"><i
                            class="far fa-clock"></i>{{post.createdAt|customTime}}</span>
                   </div>
@@ -195,8 +194,7 @@
                               <p class="truncate text-xs font-semibold text-slate-500 hover:underline cursor-pointer" [routerLink]="goProfileLink(bookmark.user._id)">@{{bookmark.user.username}}</p>
                            </div>
                         </div><button [routerLink]="['/postDetails', bookmark._id]"
-                           class="rounded-md px-2 py-1 text-xs font-bold text-mainColorLight transition hover:bg-[#e7f3ff]">View
-                           details</button>
+                           class="rounded-md px-2 py-1 text-xs font-bold text-mainColorLight transition hover:bg-[#e7f3ff]">{{'PROFILE.VIEW_DETAILS'|translate}}</button>
                      </div>
                      <div class="pt-3">
                         @if (bookmark.body) {
@@ -222,11 +220,11 @@
                      class="flex flex-col gap-2 border-t border-slate-200 px-4 py-3 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
                      <div class="flex flex-wrap items-center gap-3 sm:gap-5"><span
                            class="inline-flex items-center gap-2 font-semibold"><i
-                              class="far fa-thumbs-up text-mainColorLight"></i>{{bookmark.likesCount}} likes</span><span
+                              class="far fa-thumbs-up text-mainColorLight"></i>{{bookmark.likesCount}} {{'POST.LIKE'|translate}}</span><span
                            class="inline-flex items-center gap-2 font-semibold "><i
-                              class="fas fa-repeat text-mainColorLight"></i>{{bookmark.sharesCount}} shares</span><span
+                              class="fas fa-repeat text-mainColorLight"></i>{{bookmark.sharesCount}} {{'POST.SHARE'|translate}}</span><span
                            class="inline-flex items-center gap-2 font-semibold"><i
-                              class="far fa-comment text-mainColorLight"></i>{{bookmark.commentsCount}} comments</span>
+                              class="far fa-comment text-mainColorLight"></i>{{bookmark.commentsCount}} {{'POST.COMMENT'|translate}}</span>
                      </div><span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500"><i
                            class="far fa-clock"></i>{{bookmark.createdAt|customTime}}</span>
                   </div>
@@ -252,8 +250,8 @@
 <div class="fixed inset-0 z-[90] flex items-center justify-center bg-black/70 p-4">
    <div class="w-full max-w-[560px] rounded-2xl border border-slate-200 bg-white p-4 shadow-xl sm:p-5">
       <div class="mb-3">
-         <h3 class="text-lg font-extrabold text-slate-900">Adjust profile photo</h3>
-         <p class="text-sm text-slate-500">Drag to reposition and use zoom for perfect framing.</p>
+         <h3 class="text-lg font-extrabold text-slate-900">{{'PROFILE.PHOTO_MODAL.TITLE'|translate}}</h3>
+         <p class="text-sm text-slate-500">{{'PROFILE.PHOTO_MODAL.SUBTITLE'|translate}}</p>
       </div>
       <div class="mx-auto w-full max-w-[340px] overflow-x-auto pb-1">
          <div
@@ -265,12 +263,12 @@
       </div>
       <div class="mt-4 space-y-2">
          <div class="flex items-center justify-between text-xs font-bold text-slate-500">
-            <span>Zoom</span><span>1.00x</span></div><input min="1" max="3" step="0.01"
+            <span>{{'PROFILE.PHOTO_MODAL.ZOOM'|translate}}</span><span>1.00x</span></div><input min="1" max="3" step="0.01"
             class="h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-200 accent-[#1877f2]" type="range"
             value="1">
       </div>
       <div class="mt-4">
-         <p class="mb-1 text-xs font-bold uppercase tracking-wide text-slate-500">Post privacy</p>
+         <p class="mb-1 text-xs font-bold uppercase tracking-wide text-slate-500">{{'PROFILE.PHOTO_MODAL.PRIVACY_LABEL'|translate}}</p>
          <select [(ngModel)]="privacy"
             class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 outline-none focus:border-[#1877f2]">
             <option value="public"selected >Public</option>
@@ -280,12 +278,11 @@
       </div>
       <div class="mt-5 flex items-center justify-end gap-2">
          <button type="button" (click)="fileImg===null ; uploadPhotoModal=false; saveFile.size===0"
-            class="inline-flex items-center rounded-lg border border-slate-300 px-4 py-2 text-sm font-bold text-slate-600 transition hover:bg-slate-50">Cancel
+            class="inline-flex items-center rounded-lg border border-slate-300 px-4 py-2 text-sm font-bold text-slate-600 transition hover:bg-slate-50">{{'PROFILE.PHOTO_MODAL.CANCEL'|translate}}
          </button>
          <button
             type="button" (click)="uploadPhoto()"
-            class="inline-flex items-center rounded-lg bg-[#1877f2] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#166fe5] disabled:cursor-not-allowed disabled:opacity-60">Save
-            photo
+            class="inline-flex items-center rounded-lg bg-[#1877f2] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#166fe5] disabled:cursor-not-allowed disabled:opacity-60">{{'PROFILE.PHOTO_MODAL.SAVE'|translate}}
          </button>
       </div>
    </div>

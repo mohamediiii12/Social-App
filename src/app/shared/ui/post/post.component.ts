@@ -9,13 +9,14 @@ import { RouterLink } from "@angular/router";
 import { SharedPostComponent } from "./components/shared-post/shared-post.component";
 import { share } from 'rxjs';
 import { RelativeTimePipe } from '../../pipes/relative-time-pipe';
+import { TranslatePipe } from '@ngx-translate/core';
 
 
 
 @Component({
   selector: 'app-post',
   standalone: true,
-  imports: [ReactiveFormsModule, CommentsComponent, LikesListComponent, RouterLink, SharedPostComponent, FormsModule,RelativeTimePipe],
+  imports: [ReactiveFormsModule, CommentsComponent, LikesListComponent, RouterLink, SharedPostComponent, FormsModule,RelativeTimePipe,TranslatePipe],
   templateUrl: './post.component.html',
   styleUrl: './post.component.css'
 })
@@ -23,6 +24,7 @@ export class PostComponent {
   private readonly postService = inject(PostService);
   @Input() post!: Post;
   @Input() mainUser!: LoginUser;
+  @Input() postDetails: boolean = false;
   @Output() like = new EventEmitter<string>();
   @Output() delete = new EventEmitter<string>();
   @Output() bookmark = new EventEmitter<string>();

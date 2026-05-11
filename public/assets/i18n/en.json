@@ -1,0 +1,315 @@
+{
+   "LANGUAGE": {
+    "TITLE": "Language",
+    "SUBTITLE": "Choose your preferred display language.",
+    "EN": "EN",
+    "AR": "AR"
+  },
+
+  "NAVBAR": {
+    "BRAND": "SocialHub",
+    "FEED": "Feed",
+    "PROFILE": "Profile",
+    "NOTIFICATIONS": "Notifications",
+    "SETTINGS": "Settings",
+    "SIGN_OUT": "Sign out"
+  },
+
+  "LOGIN": {
+    "BRAND": "SocialHub",
+    "BRAND_SUBTITLE": "Connect with friends and the world around you on Route Posts.",
+    "TAB_LOGIN": "Login",
+    "TAB_REGISTER": "Register",
+    "TITLE": "Log in to Route Posts",
+    "SUBTITLE": "Log in and continue your social journey.",
+    "LOGIN_FIELD": {
+      "PLACEHOLDER": "Username or Email",
+      "REQUIRED": "Username or Email is required.",
+      "MIN_LENGTH": "Username or Email must be at least 3 characters long."
+    },
+    "PASSWORD_FIELD": {
+      "PLACEHOLDER": "Password",
+      "REQUIRED": "Password is required.",
+      "PATTERN": "Password must be at least 8 characters, include uppercase, lowercase, number, and special character."
+    },
+    "SUBMIT": "Log In",
+    "FORGOT_PASSWORD": "Forgot password?"
+  },
+
+  "REGISTER": {
+    "BRAND": "SocialHub",
+    "BRAND_SUBTITLE": "Connect with friends and the world around you on Route Posts.",
+    "TAB_LOGIN": "Login",
+    "TAB_REGISTER": "Register",
+    "TITLE": "Create a new account",
+    "SUBTITLE": "It is quick and easy.",
+    "ALREADY_HAVE_ACCOUNT": "Already have an account? Log in",
+    "FULL_NAME": {
+      "PLACEHOLDER": "Full name",
+      "REQUIRED": "Full Name is required.",
+      "MIN_LENGTH": "Name must be at least 3 characters"
+    },
+    "USERNAME": {
+      "PLACEHOLDER": "Username (optional)"
+    },
+    "EMAIL": {
+      "PLACEHOLDER": "Email address",
+      "REQUIRED": "Email is required.",
+      "INVALID": "Please enter a valid email address."
+    },
+    "GENDER": {
+      "PLACEHOLDER": "Select Gender",
+      "MALE": "Male",
+      "FEMALE": "Female",
+      "REQUIRED": "Gender is required."
+    },
+    "DATE_OF_BIRTH": {
+      "PLACEHOLDER": "Birth date",
+      "REQUIRED": "Date of Birth is required."
+    },
+    "PASSWORD": {
+      "PLACEHOLDER": "Password",
+      "REQUIRED": "Password is required.",
+      "PATTERN": "Password must be at least 8 characters, include uppercase, lowercase, number, and special character."
+    },
+    "RE_PASSWORD": {
+      "PLACEHOLDER": "Confirm password",
+      "REQUIRED": "Confirm Password is required.",
+      "NOT_MATCH": "Confirm Password must match the password."
+    },
+    "SUBMIT": "Create A New Account"
+  },
+
+  "CHANGE_PASSWORD": {
+    "TITLE": "Change Password",
+    "SUBTITLE": "Keep your account secure by using a strong password.",
+    "CURRENT_PASSWORD": {
+      "LABEL": "Current password",
+      "PLACEHOLDER": "Enter current password",
+      "REQUIRED": "Password is required."
+    },
+    "NEW_PASSWORD": {
+      "LABEL": "New password",
+      "PLACEHOLDER": "Enter new password",
+      "REQUIRED": "Password is required.",
+      "PATTERN": "Password must be at least 8 characters, include uppercase, lowercase, number, and special character."
+    },
+    "CONFIRM_PASSWORD": {
+      "LABEL": "Confirm new password",
+      "PLACEHOLDER": "Re-enter new password",
+      "REQUIRED": "Confirm Password is required.",
+      "NOT_MATCH": "Confirm Password must match the password."
+    },
+    "SUBMIT": "Change Password",
+    "ERRORS": {
+      "INVALID_TOKEN": "Current password is incorrect or you are not authorized, please login again."
+    }
+  },
+
+  "FEED": {
+    "POST_PLACEHOLDER": "What's on your mind...",
+    "POST_BUTTON": "Post",
+    "PHOTO_VIDEO": "Photo/video",
+    "FEELING": "Feeling/activity",
+    "PRIVACY": {
+      "PUBLIC": "public",
+      "FOLLOWING": "followers",
+      "ONLY_ME": "only me"
+    },
+    "POSTING": "Posting...",
+    "LOADING_POSTS": "loading Posts..."
+  },
+
+  "SIDE_LEFT": {
+    "FEED": "Feed",
+    "MY_POSTS": "My Posts",
+    "COMMUNITY": "Community",
+    "SAVED": "Saved"
+  },
+
+  "SIDE_RIGHT": {
+    "TITLE": "Suggested Friends",
+    "SEARCH_PLACEHOLDER": "Search friends...",
+    "FOLLOW": "Follow",
+    "FOLLOWING": "Follow...",
+    "FOLLOWERS": "followers",
+    "MUTUAL": "mutual",
+    "VIEW_MORE": "View more",
+    "NO_RESULTS": "No users matched your search."
+  },
+
+  "PROFILE": {
+    "MEMBER_BADGE": "Route Posts member",
+    "ABOUT": "About",
+    "EMAIL_ACTIVE": "Active on Route Posts",
+    "MY_POSTS_LABEL": "My posts",
+    "SAVED_POSTS_LABEL": "Saved posts",
+    "FOLLOWERS": "Followers",
+    "FOLLOWING": "Following",
+    "BOOKMARKS": "Bookmarks",
+    "TABS": {
+      "MY_POSTS": "My Posts",
+      "SAVED": "Saved"
+    },
+    "VIEW_COVER": "View cover",
+    "CHANGE_COVER": "Change cover",
+    "REMOVE": "Remove",
+    "VIEW_DETAILS": "View details",
+    "PHOTO_MODAL": {
+      "TITLE": "Adjust profile photo",
+      "SUBTITLE": "Drag to reposition and use zoom for perfect framing.",
+      "ZOOM": "Zoom",
+      "PRIVACY_LABEL": "Post privacy",
+      "CANCEL": "Cancel",
+      "SAVE": "Save photo"
+    }
+  },
+
+  "USER_PROFILE": {
+    "BACK": "Back",
+    "FOLLOW": "Follow",
+    "FOLLOWING": "Following",
+    "FOLLOW_LOADING": "Following...",
+    "UNFOLLOW_LOADING": "Updating...",
+    "NO_POSTS": "No posts"
+  },
+
+  "NOTIFICATIONS": {
+    "TITLE": "Notifications",
+    "SUBTITLE": "Realtime updates for likes, comments, shares, and follows.",
+    "MARK_ALL": "Mark all as read",
+    "ALL": "All",
+    "UNREAD": "Unread",
+    "LOAD_MORE": "Load more notifications",
+    "LOADING_MORE": "Loading more....",
+    "NO_UNREAD": "No unread notifications yet.",
+    "MARK_AS_READ": "Mark as read",
+    "READ": "Read",
+    "ACTIONS": {
+      "LIKE_POST": "Liked your post",
+      "COMMENT_POST": "Commented on your post",
+      "SHARE_POST": "Shared your post",
+      "FOLLOW_USER": "Followed you"
+    }
+  },
+
+  "SUGGESTIONS": {
+    "BACK": "Back to feed",
+    "TITLE": "All Suggested Friends",
+    "SEARCH_PLACEHOLDER": "Search by name or username...",
+    "FOLLOW": "Follow",
+    "FOLLOWING_LOADING": "Follow...",
+    "FOLLOWERS": "followers",
+    "MUTUAL": "mutual",
+    "LOAD_MORE": "Load more users",
+    "LOADING_MORE": "Loading...",
+    "NO_RESULTS": "No users matched your search."
+  },
+
+  "POST": {
+    "LIKE": "Like",
+    "COMMENT": "Comment",
+    "SHARE": "Share",
+    "SAVE_POST": "Save post",
+    "UNSAVE_POST": "Unsave post",
+    "EDIT_POST": "Edit post",
+    "DELETE_POST": "Delete post",
+    "VIEW_DETAILS": "View details",
+    "SAVED_BADGE": "Saved",
+    "CANCEL": "Cancel",
+    "SAVE_EDIT": "Save",
+    "TOP_COMMENT": "Top Comment",
+    "VIEW_ALL_COMMENTS": "View all comments",
+    "LIKES_COUNT": "likes",
+    "SHARES_COUNT": "shares",
+    "COMMENTS_COUNT": "comments",
+    "UPDATED_PHOTO": "updated profile picture.",
+    "SHARE_MODAL": {
+      "TITLE": "Share post",
+      "PLACEHOLDER": "Say something about this...",
+      "CANCEL": "Cancel",
+      "SHARE_NOW": "Share now",
+      "SHARING": "Sharing",
+      "ORIGINAL_POST": "Original Post"
+    }
+  },
+
+  "COMMENTS": {
+    "TITLE": "Comments",
+    "MOST_RELEVANT": "Most relevant",
+    "NEWEST": "Newest",
+    "PLACEHOLDER": "Comment as",
+    "NO_COMMENTS_TITLE": "No comments yet",
+    "NO_COMMENTS_SUBTITLE": "Be the first to comment.",
+    "LOADING": "Loading Comments...",
+    "EDIT": "Edit",
+    "DELETE": "Delete",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "LIKE": "Like",
+    "REPLY": "Reply",
+    "HIDE_REPLIES": "Hide replies",
+    "CONTENT_REQUIRED": "At least Content is required",
+    "VIEW_MORE": "View more comments",
+    "LOADING_MORE": "loading..."
+  },
+
+  "REPLAYS": {
+    "LOADING": "loading replays",
+    "NO_REPLAYS": "No Replays",
+    "VIEW_MORE": "View more replays",
+    "LOADING_MORE": "loading...",
+    "LIKE": "Like",
+    "EDIT": "Edit",
+    "DELETE": "Delete",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "CONTENT_REQUIRED": "At least Content is required"
+  },
+
+  "LIKES_LIST": {
+    "TITLE": "People who reacted",
+    "LOADING": "Loading Likes..."
+  },
+
+  "POST_DETAILS": {
+    "BACK": "Back"
+  },
+
+  "FEATURES": {
+    "TITLE": "Platform features",
+    "CHAT": { "TITLE": "Real-time Chat", "SUBTITLE": "Instant messaging" },
+    "MEDIA": { "TITLE": "Share Media", "SUBTITLE": "Photos & videos" },
+    "ALERTS": { "TITLE": "Smart Alerts", "SUBTITLE": "Stay updated" },
+    "COMMUNITIES": { "TITLE": "Communities", "SUBTITLE": "Find your tribe" }
+  },
+
+  "STATS": {
+    "USERS": { "COUNT": "2M+", "LABEL": "Active Users" },
+    "POSTS": { "COUNT": "10M+", "LABEL": "Posts Shared" },
+    "MESSAGES": { "COUNT": "50M+", "LABEL": "Messages Sent" }
+  },
+
+  "REVIEW": {
+    "QUOTE": "SocialHub has completely changed how I connect with friends and discover new communities. The experience is seamless!",
+    "AUTHOR": "Alex Johnson",
+    "ROLE": "Product Designer"
+  },
+
+  "HEADER": {
+    "WELCOME_BACK_TITLE": "Welcome Back",
+    "WELCOME_BACK_HIGHLIGHT": "to SocialHub App",
+    "WELCOME_BACK_SUBTITLE": "Signin to connect people all over the world",
+    "CONNECT_TITLE": "Connect with",
+    "CONNECT_HIGHLIGHT": "amazing people",
+    "CONNECT_SUBTITLE": "Join millions of users sharing moments, ideas, and building meaningful connections every day"
+  },
+
+  "NOT_FOUND": {
+    "MESSAGE": "notfound works!"
+  },
+
+  "FORGOT_PASSWORD": {
+    "MESSAGE": "forgot-password works!"
+  }
+}

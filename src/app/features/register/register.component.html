@@ -1,311 +1,211 @@
-<section class="grid lg:grid-cols-2 ">
-   <div class="bg-[url('/signup-bg-DGRfriy9.png')] bg-center bg-cover min-h-screen text-white">
-      <div class="bg-[rgba(0,40,141,0.6)] h-full p-10">
-
-         <header class="hidden lg:block">
-            <h1>
-               <a routerLink="/login" class="flex items-center gap-3">
-                  <span
-                     class="size-12 bg-white/45 border border-1 border-white/30 rounded-xl flex items-center justify-center text-lg font-bold">S</span>
-                  <span class="text-2xl font-bold">SocialHub</span>
-               </a>
-            </h1>
-         </header>
-         <div class="space-y-6">
-            <div>
-               <h2 class="text-5xl font-bold max-w-96 pb-4">
-                  Connect with
-                  <span class=" bg-linear-to-r from-cyan-300 to-cyan-100 text-transparent bg-clip-text">amazing
-                     people</span>
-               </h2>
-               <p class=" max-w-md">Join millions of users sharing moments,
-                  ideas, and building meaningful connections
-                  every day</p>
-            </div>
-            <section>
-               <h3 class="sr-only">Platform features</h3>
-               <ul class="grid lg:grid-cols-2 gap-4">
-                  <li class=" bg-white/20 border border-1 border-white/30 rounded-xl px-4 py-2 hover:scale-105 duration-200 transition-transform
-                  flex items-center gap-3">
-                     <div class="size-10 bg-teal-400/20 text-green-300 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-message"></i>
-                     </div>
-                     <div>
-                        <h4 class>Real-time Chat</h4>
-                        <p class>Instant messaging</p>
-                     </div>
-                  </li>
-                  <li class=" bg-white/20 border border-1 border-white/30 rounded-xl px-4 py-2 hover:scale-105 duration-200 transition-transform
-                  flex items-center gap-3">
-                     <div class="size-10 bg-blue-400/20 text-blue-100 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-image"></i>
-                     </div>
-                     <div>
-                        <h4 class>Share Media</h4>
-                        <p class>Photos & videos</p>
-                     </div>
-                  </li>
-                  <li class=" bg-white/20 border border-1 border-white/30 rounded-xl px-4 py-2 hover:scale-105 duration-200 transition-transform
-                  flex items-center gap-3">
-                     <div class="size-10 bg-pink-400/20 text-pink-100 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-bell"></i>
-                     </div>
-                     <div>
-                        <h4 class>Smart Alerts
-                        </h4>
-                        <p class>Stay updated</p>
-                     </div>
-                  </li>
-                  <li class=" bg-white/20 border border-1 border-white/30 rounded-xl px-4 py-2 hover:scale-105 duration-200 transition-transform
-                  flex items-center gap-3">
-                     <div class="size-10 bg-teal-400/20 text-green-300 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-users"></i>
-                     </div>
-                     <div>
-                        <h4 class>Communities</h4>
-                        <p class>Find your tribe</p>
-                     </div>
-                  </li>
-               </ul>
-            </section>
-            <section>
-               <ul class="flex items-center gap-5">
-                  <li>
-                     <div class="flex items-center gap-2">
-                        <i class="fas fa-users"></i>
-                        <span class="text-2xl font-bold">2M+</span>
-                     </div>
-                     <p>Active Users</p>
-                  </li>
-                  <li>
-                     <div class="flex items-center gap-2">
-                        <i class="fas fa-heart"></i>
-                        <span class="text-2xl font-bold">10M+</span>
-                     </div>
-                     <p>Posts Shared</p>
-                  </li>
-                  <li>
-                     <div class="flex items-center gap-2">
-                        <i class="fas fa-message"></i>
-                        <span class="text-2xl font-bold">50M+</span>
-                     </div>
-                     <p>Messages Sent</p>
-                  </li>
-               </ul>
-            </section>
-         </div>
-         <figure
-            class="mt-5 bg-white/20 border border-white/30 p-4 space-y-4 rounded-xl backdrop-blur-sm hover:bg-white/25 transition-colors duration-200">
-            <div class="text-yellow-300">
-               <i class="fas fa-star hover:scale-105 transition-transform duration-200"></i>
-               <i class="fas fa-star hover:scale-105 transition-transform duration-200"></i>
-               <i class="fas fa-star hover:scale-105 transition-transform duration-200"></i>
-               <i class="fas fa-star hover:scale-105 transition-transform duration-200"></i>
-               <i class="fas fa-star hover:scale-105 transition-transform duration-200"></i>
-            </div>
-            <p class="text-lg italic">"SocialHub has completely changed how I connect with friends and discover new
-               communities. The experience is seamless!"</p>
-            <div class="flex items-center gap-3">
-               <img src="/alex-avatar-BLDJqiDr.png" alt="review avatar" class="size-12 rounded-full">
-               <div class="flex flex-col">
-                  <cite>Alex Johnson</cite>
-                  <span class="text-sm text-gray-300">Product Designer</span>
-               </div>
-            </div>
-         </figure>
-         <app-scroll-down-button></app-scroll-down-button>
+<section class="grid lg:grid-cols-2">
+  <div class="bg-[url('/signup-bg-DGRfriy9.png')] bg-center bg-cover min-h-screen text-white">
+    <div class="bg-[rgba(0,40,141,0.6)] h-full p-10">
+      <header class="hidden lg:block">
+        <h1>
+          <a routerLink="/login" class="flex items-center gap-3">
+            <span class="size-12 bg-white/45 border border-1 border-white/30 rounded-xl flex items-center justify-center text-lg font-bold">S</span>
+            <span class="text-2xl font-bold">{{ 'REGISTER.BRAND' | translate }}</span>
+          </a>
+        </h1>
+      </header>
+      <div class="space-y-6">
+        <div>
+          <h2 class="text-5xl font-bold max-w-96 pb-4">
+            {{ 'HEADER.CONNECT_TITLE' | translate }}
+            <span class="bg-linear-to-r from-cyan-300 to-cyan-100 text-transparent bg-clip-text">{{ 'HEADER.CONNECT_HIGHLIGHT' | translate }}</span>
+          </h2>
+          <p class="max-w-md">{{ 'HEADER.CONNECT_SUBTITLE' | translate }}</p>
+        </div>
+        <section>
+          <h3 class="sr-only">{{ 'FEATURES.TITLE' | translate }}</h3>
+          <ul class="grid lg:grid-cols-2 gap-4">
+            <li class="bg-white/20 border border-1 border-white/30 rounded-xl px-4 py-2 hover:scale-105 duration-200 transition-transform flex items-center gap-3">
+              <div class="size-10 bg-teal-400/20 text-green-300 rounded-xl flex items-center justify-center"><i class="fas fa-message"></i></div>
+              <div><h4>{{ 'FEATURES.CHAT.TITLE' | translate }}</h4><p>{{ 'FEATURES.CHAT.SUBTITLE' | translate }}</p></div>
+            </li>
+            <li class="bg-white/20 border border-1 border-white/30 rounded-xl px-4 py-2 hover:scale-105 duration-200 transition-transform flex items-center gap-3">
+              <div class="size-10 bg-blue-400/20 text-blue-100 rounded-xl flex items-center justify-center"><i class="fas fa-image"></i></div>
+              <div><h4>{{ 'FEATURES.MEDIA.TITLE' | translate }}</h4><p>{{ 'FEATURES.MEDIA.SUBTITLE' | translate }}</p></div>
+            </li>
+            <li class="bg-white/20 border border-1 border-white/30 rounded-xl px-4 py-2 hover:scale-105 duration-200 transition-transform flex items-center gap-3">
+              <div class="size-10 bg-pink-400/20 text-pink-100 rounded-xl flex items-center justify-center"><i class="fas fa-bell"></i></div>
+              <div><h4>{{ 'FEATURES.ALERTS.TITLE' | translate }}</h4><p>{{ 'FEATURES.ALERTS.SUBTITLE' | translate }}</p></div>
+            </li>
+            <li class="bg-white/20 border border-1 border-white/30 rounded-xl px-4 py-2 hover:scale-105 duration-200 transition-transform flex items-center gap-3">
+              <div class="size-10 bg-teal-400/20 text-green-300 rounded-xl flex items-center justify-center"><i class="fas fa-users"></i></div>
+              <div><h4>{{ 'FEATURES.COMMUNITIES.TITLE' | translate }}</h4><p>{{ 'FEATURES.COMMUNITIES.SUBTITLE' | translate }}</p></div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <ul class="flex items-center gap-5">
+            <li>
+              <div class="flex items-center gap-2"><i class="fas fa-users"></i><span class="text-2xl font-bold">{{ 'STATS.USERS.COUNT' | translate }}</span></div>
+              <p>{{ 'STATS.USERS.LABEL' | translate }}</p>
+            </li>
+            <li>
+              <div class="flex items-center gap-2"><i class="fas fa-heart"></i><span class="text-2xl font-bold">{{ 'STATS.POSTS.COUNT' | translate }}</span></div>
+              <p>{{ 'STATS.POSTS.LABEL' | translate }}</p>
+            </li>
+            <li>
+              <div class="flex items-center gap-2"><i class="fas fa-message"></i><span class="text-2xl font-bold">{{ 'STATS.MESSAGES.COUNT' | translate }}</span></div>
+              <p>{{ 'STATS.MESSAGES.LABEL' | translate }}</p>
+            </li>
+          </ul>
+        </section>
       </div>
-   </div>
-   <div class="flex items-center justify-center lg:min-h-screen py-12  bg-[rgba(0,40,141,0.1)] py-8 px-4">
-      <div class="bg-white p-4 sm:p-6 rounded-2xl w-full max-w-md shadow-sm">
-         <div class="text-center mb-4 lg:hidden">
-            <h1 class="text-mainColor text-3xl font-extrabold tracking-tight">SocialHub</h1>
-            <p class="mt-1 font-medium text-slate-700 leading-snug">Connect with friends and the world around you on
-               Route Posts.</p>
-         </div>
-         <div class="bg-slate-100 rounded-xl mb-5 flex p-1">
-            <button type="button" routerLink="/login"
-               class="text-slate-700 text-sm font-extrabold hover:text-slate-800 transition-colors duration-200 w-full py-2 cursor-pointer">Login</button>
-            <button type="button"
-               class="text-mainColor text-sm font-extrabold bg-white rounded-lg w-full py-2 shadow-sm cursor-pointer">Register</button>
-         </div>
-         <div class="mb-4">
-            <h2 class="text-slate-900 text-2xl font-extrabold">Create a new account</h2>
-            <p class="text-sm text-slate-500 mt-1">It is quick and easy.</p>
-         </div>
-         <form class="space-y-4" [formGroup]="registerForm" (ngSubmit)="submition()">
-            <div class="relative">
-               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <i class="far fa-user text-slate-400"></i>
-               </div>
-               <input type="text" id="FullName" formControlName="name" [class]="{
-               'focus:border-red-700':registerForm.get('name')?.invalid && registerForm.get('name')?.touched,
-               'border-red-700':registerForm.get('name')?.invalid && registerForm.get('name')?.touched,
-                              }"
-                  class=" block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm  rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400 "
-                  placeholder="Full name">
-            </div>
-            @if (registerForm.get("name")?.invalid && registerForm.get("name")?.touched) {
-            <div class="flex  mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft " role="alert">
-               <span class="sr-only">Danger</span>
-               <div>
-                  <ul class="-space-y-1 ps-2.5 ">
-                     @if (registerForm.get("name")?.hasError("required")) {
-                     <li>Full Name is required.</li>
-                     }
-                     @if (registerForm.get("name")?.hasError("minlength")) {
-                     <li>Name must be at least 3 characters</li>
-                     }
-                  </ul>
-               </div>
-            </div>
-            }
-            <div class="relative">
-               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <i class="fas fa-at text-slate-400/65"></i>
-               </div>
-               <input type="text" id="userName" formControlName="username"
-                  class=" block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm  rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400 "
-                  placeholder="Username (optional)">
-            </div>
+      <figure class="mt-5 bg-white/20 border border-white/30 p-4 space-y-4 rounded-xl backdrop-blur-sm hover:bg-white/25 transition-colors duration-200">
+        <div class="text-yellow-300">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="text-lg italic">"{{ 'REVIEW.QUOTE' | translate }}"</p>
+        <div class="flex items-center gap-3">
+          <img src="/alex-avatar-BLDJqiDr.png" alt="review avatar" class="size-12 rounded-full">
+          <div class="flex flex-col">
+            <cite>{{ 'REVIEW.AUTHOR' | translate }}</cite>
+            <span class="text-sm text-gray-300">{{ 'REVIEW.ROLE' | translate }}</span>
+          </div>
+        </div>
+      </figure>
+      <app-scroll-down-button></app-scroll-down-button>
+    </div>
+  </div>
 
-            <div class="relative">
-               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <i class="fas fa-at text-slate-400/65"></i>
-               </div>
-               <input type="email" id="email" formControlName="email" [class]="{
-               'focus:border-red-700':registerForm.get('email')?.invalid && registerForm.get('email')?.touched,
-               'border-red-700':registerForm.get('email')?.invalid && registerForm.get('email')?.touched,
-                              }"
-                  class=" block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm  rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400 "
-                  placeholder="Email address">
-            </div>
-            @if (registerForm.get("email")?.invalid && registerForm.get("email")?.touched) {
-            <div class="flex  mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft " role="alert">
-               <span class="sr-only">Danger</span>
-               <div>
-                  <ul class="-space-y-1 ps-2.5 ">
-                     @if (registerForm.get("email")?.hasError("required")) {
-                     <li>Email is required.</li>
-                     }
-                     @if (registerForm.get("email")?.hasError("email")) {
-                     <li>Please enter a valid email address.</li>
-                     }
-                  </ul>
-               </div>
-            </div>
-            }
-            <div class="relative">
-               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <i class="fas fa-user-group text-slate-400"></i>
-               </div>
-               <select id="gender" formControlName="gender" [class]="{
-               'focus:border-red-700':registerForm.get('gender')?.invalid && registerForm.get('gender')?.touched,
-               'border-red-700':registerForm.get('gender')?.invalid && registerForm.get('gender')?.touched,
-                              }"
-                  class=" block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm  rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400 ">
-                  <option disabled hidden selected value="">Select Gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-               </select>
-            </div>
-            @if (registerForm.get("gender")?.invalid && registerForm.get("gender")?.touched) {
-            <div class="flex  mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft " role="alert">
-               <span class="sr-only">Danger</span>
-               <div>
-                  <ul class="-space-y-1 ps-2.5 ">
-                     @if (registerForm.get("gender")?.hasError("required")) {
-                     <li>Gender is required.</li>
-                     }
-                  </ul>
-               </div>
-            </div>
-            }
-            <div class="relative">
-               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <i class="far fa-calendar text-slate-400/65"></i>
-               </div>
-               <input type="date" id="birthDate" formControlName="dateOfBirth" [class]="{
-               'focus:border-red-700':registerForm.get('dateOfBirth')?.invalid && registerForm.get('dateOfBirth')?.touched,
-               'border-red-700':registerForm.get('dateOfBirth')?.invalid && registerForm.get('dateOfBirth')?.touched,
-                              }"
-                  class=" block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm  rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400 "
-                  placeholder="Birth date">
-            </div>
-            @if (registerForm.get("dateOfBirth")?.invalid && registerForm.get("dateOfBirth")?.touched) {
-            <div class="flex  mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft " role="alert">
-               <span class="sr-only">Danger</span>
-               <div>
-                  <ul class="-space-y-1 ps-2.5 ">
-                     @if (registerForm.get("dateOfBirth")?.hasError("required")) {
-                     <li>Date of Birth is required.</li>
-                     }
-                  </ul>
-               </div>
-            </div>
-            }
-            <div class="relative">
-               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <i class="fas fa-key text-slate-400/65"></i>
-               </div>
-               <input type="password" id="password" formControlName="password"  [class]="{
-               'focus:border-red-700':registerForm.get('password')?.invalid && registerForm.get('password')?.touched,
-               'border-red-700':registerForm.get('password')?.invalid && registerForm.get('password')?.touched,
-                              }"
-                  class=" block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm  rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400 "
-                  placeholder="Password">
-            </div>
-            @if (registerForm.get("password")?.invalid && registerForm.get("password")?.touched) {
-            <div class="flex  mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft " role="alert">
-               <span class="sr-only">Danger</span>
-               <div>
-                  <ul class="-space-y-1 ps-2.5 ">
-                     @if (registerForm.get("password")?.hasError("required")) {
-                     <li>Password is required.</li>
-                     }
-                     @if (registerForm.get("password")?.hasError("pattern")) {
-                     <li>Password must be at least 8 characters, include uppercase, lowercase, number, and special
-                        character.</li>
-                     }
-                  </ul>
-               </div>
-            </div>
-            }
-            <div class="relative">
-               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <i class="fas fa-key text-slate-400/65"></i>
-               </div>
-               <input type="password" id="rePassword" formControlName="rePassword"  [class]="{
-               'focus:border-red-700':registerForm.get('name')?.invalid && registerForm.get('name')?.touched,
-               'border-red-700':registerForm.get('rePassword')?.invalid && registerForm.get('rePassword')?.touched,
-                              }"
-                  class=" block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm  rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400 "
-                  placeholder="Confirm password">
-            </div>
-            @if (registerForm.get("rePassword")?.invalid && registerForm.get("rePassword")?.touched) {
-            <div class="flex  mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft " role="alert">
-               <span class="sr-only">Danger</span>
-               <div>
-                  <ul class="-space-y-1 ps-2.5 ">
-                     @if (registerForm.get("rePassword")?.hasError("required")) {
-                     <li>Confirm Password is required.</li>
-                     }
-                     @if (registerForm.get("rePassword")?.hasError("notMatch")) {
-                     <li>Confirm Password must match the password.</li>
-                     }
-                  </ul>
-               </div>
-            </div>
-            }
-            <button type="submit" [disabled]="looding"
-               class="cursor-pointer w-full bg-mainColor text-md text-white font-extrabold py-2.5 rounded-xl hover:bg-secondColor transition-colors duration-150 disabled:opacity-70 disabled:cursor-not-allowed">Create
-               A New Account @if (looding) {<i class="fas fa-spin fa-spinner ms-1"></i>}
-            </button>
-             <p class="text-md -mt-3  text-red-700 font-medium  text-center">{{errorMessage}}</p>
-         </form>
-         <a routerLink="/login" 
-            class="text-sm text-mainColor hover:underline transition-colors duration-200 text-center mt-1 block font-medium">Already
-            have an account? Log in</a>
+  <div class="flex items-center justify-center lg:min-h-screen py-12 bg-[rgba(0,40,141,0.1)] py-8 px-4">
+    <div class="bg-white p-4 sm:p-6 rounded-2xl w-full max-w-md shadow-sm">
+      <div class="text-center mb-4 lg:hidden">
+        <h1 class="text-mainColor text-3xl font-extrabold tracking-tight">{{ 'REGISTER.BRAND' | translate }}</h1>
+        <p class="mt-1 font-medium text-slate-700 leading-snug">{{ 'REGISTER.BRAND_SUBTITLE' | translate }}</p>
       </div>
-   </div>
+      <div class="bg-slate-100 rounded-xl mb-5 flex p-1">
+        <button type="button" routerLink="/login" class="text-slate-700 text-sm font-extrabold hover:text-slate-800 transition-colors duration-200 w-full py-2 cursor-pointer">{{ 'REGISTER.TAB_LOGIN' | translate }}</button>
+        <button type="button" class="text-mainColor text-sm font-extrabold bg-white rounded-lg w-full py-2 shadow-sm cursor-pointer">{{ 'REGISTER.TAB_REGISTER' | translate }}</button>
+      </div>
+      <div class="mb-4">
+        <h2 class="text-slate-900 text-2xl font-extrabold">{{ 'REGISTER.TITLE' | translate }}</h2>
+        <p class="text-sm text-slate-500 mt-1">{{ 'REGISTER.SUBTITLE' | translate }}</p>
+      </div>
+      <form class="space-y-4" [formGroup]="registerForm" (ngSubmit)="submition()">
+
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"><i class="far fa-user text-slate-400"></i></div>
+          <input type="text" id="FullName" formControlName="name"
+            [class]="{ 'focus:border-red-700': registerForm.get('name')?.invalid && registerForm.get('name')?.touched, 'border-red-700': registerForm.get('name')?.invalid && registerForm.get('name')?.touched }"
+            class="block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400"
+            [placeholder]="'REGISTER.FULL_NAME.PLACEHOLDER' | translate">
+        </div>
+        @if (registerForm.get('name')?.invalid && registerForm.get('name')?.touched) {
+          <div class="flex mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft" role="alert">
+            <span class="sr-only">Danger</span>
+            <div><ul class="-space-y-1 ps-2.5">
+              @if (registerForm.get('name')?.hasError('required')) { <li>{{ 'REGISTER.FULL_NAME.REQUIRED' | translate }}</li> }
+              @if (registerForm.get('name')?.hasError('minlength')) { <li>{{ 'REGISTER.FULL_NAME.MIN_LENGTH' | translate }}</li> }
+            </ul></div>
+          </div>
+        }
+
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"><i class="fas fa-at text-slate-400/65"></i></div>
+          <input type="text" id="userName" formControlName="username"
+            class="block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400"
+            [placeholder]="'REGISTER.USERNAME.PLACEHOLDER' | translate">
+        </div>
+
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"><i class="fas fa-at text-slate-400/65"></i></div>
+          <input type="email" id="email" formControlName="email"
+            [class]="{ 'focus:border-red-700': registerForm.get('email')?.invalid && registerForm.get('email')?.touched, 'border-red-700': registerForm.get('email')?.invalid && registerForm.get('email')?.touched }"
+            class="block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400"
+            [placeholder]="'REGISTER.EMAIL.PLACEHOLDER' | translate">
+        </div>
+        @if (registerForm.get('email')?.invalid && registerForm.get('email')?.touched) {
+          <div class="flex mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft" role="alert">
+            <span class="sr-only">Danger</span>
+            <div><ul class="-space-y-1 ps-2.5">
+              @if (registerForm.get('email')?.hasError('required')) { <li>{{ 'REGISTER.EMAIL.REQUIRED' | translate }}</li> }
+              @if (registerForm.get('email')?.hasError('email')) { <li>{{ 'REGISTER.EMAIL.INVALID' | translate }}</li> }
+            </ul></div>
+          </div>
+        }
+
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"><i class="fas fa-user-group text-slate-400"></i></div>
+          <select id="gender" formControlName="gender"
+            [class]="{ 'focus:border-red-700': registerForm.get('gender')?.invalid && registerForm.get('gender')?.touched, 'border-red-700': registerForm.get('gender')?.invalid && registerForm.get('gender')?.touched }"
+            class="block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs">
+            <option disabled hidden selected value="">{{ 'REGISTER.GENDER.PLACEHOLDER' | translate }}</option>
+            <option value="male">{{ 'REGISTER.GENDER.MALE' | translate }}</option>
+            <option value="female">{{ 'REGISTER.GENDER.FEMALE' | translate }}</option>
+          </select>
+        </div>
+        @if (registerForm.get('gender')?.invalid && registerForm.get('gender')?.touched) {
+          <div class="flex mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft" role="alert">
+            <span class="sr-only">Danger</span>
+            <div><ul class="-space-y-1 ps-2.5">
+              @if (registerForm.get('gender')?.hasError('required')) { <li>{{ 'REGISTER.GENDER.REQUIRED' | translate }}</li> }
+            </ul></div>
+          </div>
+        }
+
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"><i class="far fa-calendar text-slate-400/65"></i></div>
+          <input type="date" id="birthDate" formControlName="dateOfBirth"
+            [class]="{ 'focus:border-red-700': registerForm.get('dateOfBirth')?.invalid && registerForm.get('dateOfBirth')?.touched, 'border-red-700': registerForm.get('dateOfBirth')?.invalid && registerForm.get('dateOfBirth')?.touched }"
+            class="block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400"
+            [placeholder]="'REGISTER.DATE_OF_BIRTH.PLACEHOLDER' | translate">
+        </div>
+        @if (registerForm.get('dateOfBirth')?.invalid && registerForm.get('dateOfBirth')?.touched) {
+          <div class="flex mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft" role="alert">
+            <span class="sr-only">Danger</span>
+            <div><ul class="-space-y-1 ps-2.5">
+              @if (registerForm.get('dateOfBirth')?.hasError('required')) { <li>{{ 'REGISTER.DATE_OF_BIRTH.REQUIRED' | translate }}</li> }
+            </ul></div>
+          </div>
+        }
+
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"><i class="fas fa-key text-slate-400/65"></i></div>
+          <input type="password" id="password" formControlName="password"
+            [class]="{ 'focus:border-red-700': registerForm.get('password')?.invalid && registerForm.get('password')?.touched, 'border-red-700': registerForm.get('password')?.invalid && registerForm.get('password')?.touched }"
+            class="block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400"
+            [placeholder]="'REGISTER.PASSWORD.PLACEHOLDER' | translate">
+        </div>
+        @if (registerForm.get('password')?.invalid && registerForm.get('password')?.touched) {
+          <div class="flex mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft" role="alert">
+            <span class="sr-only">Danger</span>
+            <div><ul class="-space-y-1 ps-2.5">
+              @if (registerForm.get('password')?.hasError('required')) { <li>{{ 'REGISTER.PASSWORD.REQUIRED' | translate }}</li> }
+              @if (registerForm.get('password')?.hasError('pattern')) { <li>{{ 'REGISTER.PASSWORD.PATTERN' | translate }}</li> }
+            </ul></div>
+          </div>
+        }
+
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"><i class="fas fa-key text-slate-400/65"></i></div>
+          <input type="password" id="rePassword" formControlName="rePassword"
+            [class]="{ 'focus:border-red-700': registerForm.get('rePassword')?.invalid && registerForm.get('rePassword')?.touched, 'border-red-700': registerForm.get('rePassword')?.invalid && registerForm.get('rePassword')?.touched }"
+            class="block w-full ps-11 pe-3 py-3 bg-slate-50 border border-default-medium text-slate-800 text-sm rounded-xl focus:border focus:border-mainColor focus:border-2 focus:bg-white shadow-xs placeholder:text-slate-400"
+            [placeholder]="'REGISTER.RE_PASSWORD.PLACEHOLDER' | translate">
+        </div>
+        @if (registerForm.get('rePassword')?.invalid && registerForm.get('rePassword')?.touched) {
+          <div class="flex mb-3 -mt-3 text-xs text-fg-danger-strong rounded-md bg-danger-soft" role="alert">
+            <span class="sr-only">Danger</span>
+            <div><ul class="-space-y-1 ps-2.5">
+              @if (registerForm.get('rePassword')?.hasError('required')) { <li>{{ 'REGISTER.RE_PASSWORD.REQUIRED' | translate }}</li> }
+              @if (registerForm.get('rePassword')?.hasError('notMatch')) { <li>{{ 'REGISTER.RE_PASSWORD.NOT_MATCH' | translate }}</li> }
+            </ul></div>
+          </div>
+        }
+
+        <button type="submit" [disabled]="looding"
+          class="cursor-pointer w-full bg-mainColor text-md text-white font-extrabold py-2.5 rounded-xl hover:bg-secondColor transition-colors duration-150 disabled:opacity-70 disabled:cursor-not-allowed">
+          {{ 'REGISTER.SUBMIT' | translate }}
+          @if (looding) { <i class="fas fa-spin fa-spinner ms-1"></i> }
+        </button>
+        <p class="text-md -mt-3 text-red-700 font-medium text-center">{{ errorMessage }}</p>
+      </form>
+      <a routerLink="/login" class="text-sm text-mainColor hover:underline transition-colors duration-200 text-center mt-1 block font-medium">{{ 'REGISTER.ALREADY_HAVE_ACCOUNT' | translate }}</a>
+    </div>
+  </div>
 </section>
