@@ -38,13 +38,13 @@
         <ul class="p-2 text-sm text-body font-medium" aria-labelledby="user-menu-button">
           
           <li>
-            <a routerLink="/profile" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-slate-600 rounded"><i><i class="fas fa-user me-2 text-sm"></i></i>{{ 'NAVBAR.PROFILE' | translate }}</a>
+            <a (click)="dropDown = false" routerLink="/profile" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-slate-600 rounded"><i><i class="fas fa-user me-2 text-sm"></i></i>{{ 'NAVBAR.PROFILE' | translate }}</a>
           </li>
           <li>
-            <a routerLink="/change" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-slate-600 rounded"><i><i class="fas fa-gear me-2 text-sm"></i></i>{{ 'NAVBAR.SETTINGS' | translate }}</a>
+            <a (click)="dropDown = false" routerLink="/change" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-slate-600 rounded"><i><i class="fas fa-gear me-2 text-sm"></i></i>{{ 'NAVBAR.SETTINGS' | translate }}</a>
           </li>
           <li>
-            <a (click)="logOut()" class="inline-flex items-center w-full p-2 hover:bg-red-50 hover:text-slate-600 rounded"> <i class="fas fa-sign-out-alt me-2 text-sm"></i>{{ 'NAVBAR.SIGN_OUT' | translate }}</a>
+            <a (click)="dropDown = false; logOut()" class="inline-flex items-center w-full p-2 hover:bg-red-50 hover:text-slate-600 rounded"> <i class="fas fa-sign-out-alt me-2 text-sm"></i>{{ 'NAVBAR.SIGN_OUT' | translate }}</a>
           </li>
         </ul>
       </div>
